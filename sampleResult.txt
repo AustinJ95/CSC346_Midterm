@@ -1,0 +1,2526 @@
+<div id="maincontent">
+
+<h1>Search Results</h1>
+<button type="button" onclick="location.href='Default.asp?tck=201910';">Search Again</button>
+<table class="results">
+	<tr>
+		<th>CRN</th>
+		<th>Course</th>
+		<th>Sec</th>
+		<th>Type</th>
+		<th>Title</th>
+		<th>Hrs</th>
+		<th>Days</th>
+		<th style="width: 150px;">Times</th>
+		<th>Room</th>
+		<th>Instructor</th>
+	</tr>
+
+		<tr class="list_row">
+			<td>10821</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=01">RDG095</a>
+			</td>
+			<td>01</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=01">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>9:00AM-9:50AM</td>
+			<td>Spratt Hall 103</td>
+			<td>Anderson, C</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14256</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=02">RDG095</a>
+			</td>
+			<td>02</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=02">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>9:30AM-10:50AM</td>
+			<td>Spratt Hall 103</td>
+			<td>Nelson, N</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>10823</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=03">RDG095</a>
+			</td>
+			<td>03</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=03">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>8:00AM-9:20AM</td>
+			<td>Spratt Hall 103</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>10827</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=04">RDG095</a>
+			</td>
+			<td>04</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=04">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>10:00AM-10:50AM</td>
+			<td>Spratt Hall 103</td>
+			<td>Anderson, C</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>10825</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=05">RDG095</a>
+			</td>
+			<td>05</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=05">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>10:00AM-10:50AM</td>
+			<td>Wilson Hall 206</td>
+			<td>Evans, P</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>10826</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=06">RDG095</a>
+			</td>
+			<td>06</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=06">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>11:00AM-11:50AM</td>
+			<td>Wilson Hall 206</td>
+			<td>Evans, P</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14257</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=07">RDG095</a>
+			</td>
+			<td>07</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=07">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>11:00AM-12:20PM</td>
+			<td>Spratt Hall 103</td>
+			<td>Nelson, N</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>12763</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=08">RDG095</a>
+			</td>
+			<td>08</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=08">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>11:00AM-12:20PM</td>
+			<td>Murphy Hall 106</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>10829</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=09">RDG095</a>
+			</td>
+			<td>09</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=09">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>12:00PM-12:50PM</td>
+			<td>Spratt Hall 103</td>
+			<td>Anderson, C</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14258</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=10">RDG095</a>
+			</td>
+			<td>10</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=10">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MW</td>
+			<td>1:00PM-2:20PM</td>
+			<td>Murphy Hall 106</td>
+			<td>Nelson, N</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>10833</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=13">RDG095</a>
+			</td>
+			<td>13</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=13">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>1:00PM-1:50PM</td>
+			<td>Spratt Hall 103</td>
+			<td>Sexton, S</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    90.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>10834</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=14">RDG095</a>
+			</td>
+			<td>14</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=14">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>2:00PM-2:50PM</td>
+			<td>Spratt Hall 103</td>
+			<td>Sexton, S</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    95.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11709</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=18">RDG095</a>
+			</td>
+			<td>18</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=RDG&crse_number=095&seq_number_key=18">Reading Skills Improvement</a></td>
+			<td>3</td>
+			<td>MW</td>
+			<td>6:30PM-7:50PM</td>
+			<td>Spratt Hall 103</td>
+			<td>Voigt, B</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 22-->
+						Maximum Enrollment: 22<br />
+						Section Seats Available: 22<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Developmental Reading Fee    95.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14030</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=02">UNV101</a>
+			</td>
+			<td>02</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=02">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>10:00AM-10:50AM</td>
+			<td>Griffon Indoor Sports Complex 134</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11547</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=03">UNV101</a>
+			</td>
+			<td>03</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=03">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>9:00AM-9:50AM</td>
+			<td>Looney Complex 212</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Health&nbsp;
+					Science & Health Careers Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11548</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=04">UNV101</a>
+			</td>
+			<td>04</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=04">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>11:00AM-11:50AM</td>
+			<td>Murphy Hall 120</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in STEM (Science,&nbsp;
+					Technology, Engineering & Mathematics) Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11561</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=05">UNV101</a>
+			</td>
+			<td>05</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=05">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MW</td>
+			<td>5:00PM-6:20PM</td>
+			<td>Murphy Hall 113</td>
+			<td>Academic Advising Center, S</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This is a general section for any major.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11555</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=06">UNV101</a>
+			</td>
+			<td>06</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=06">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>9:30AM-10:50AM</td>
+			<td>Murphy Hall 201</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Education&nbsp;
+					Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11551</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=07">UNV101</a>
+			</td>
+			<td>07</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=07">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>9:30AM-10:50AM</td>
+			<td>Wilson Hall 206</td>
+			<td>Godboldt, S</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 35-->
+						Maximum Enrollment: 35<br />
+						Section Seats Available: 35<br />
+
+					</span>
+
+				</span>
+				This section is for Criminal Justice, Legal Studies and&nbsp;
+					Social Work majors or intended majors only.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Computer Intensive Course Fee    45.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11552</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=08">UNV101</a>
+			</td>
+			<td>08</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=08">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>11:00AM-12:20PM</td>
+			<td>Murphy Hall 105</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11553</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=09">UNV101</a>
+			</td>
+			<td>09</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=09">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>10:00AM-10:50AM</td>
+			<td>Spratt Hall 203</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Business &&nbsp;
+					Entrepreneurship Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11554</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=10">UNV101</a>
+			</td>
+			<td>10</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=10">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>11:00AM-12:20PM</td>
+			<td>Murphy Hall 219</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Health&nbsp;
+					Sciences & Health Careers Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>12876</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=11">UNV101</a>
+			</td>
+			<td>11</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=11">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>11:00AM-12:20PM</td>
+			<td>Murphy Hall 205</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Social &&nbsp;
+					Behavioral Science Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11556</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=12">UNV101</a>
+			</td>
+			<td>12</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=12">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>11:00AM-11:50AM</td>
+			<td>Wilson Hall 105</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Visual Arts &&nbsp;
+					Performing Arts Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11557</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=13">UNV101</a>
+			</td>
+			<td>13</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=13">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>12:30PM-1:50PM</td>
+			<td>Popplewell Hall 104</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Health&nbsp;
+					Sciences & Health Careers Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>12461</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=15">UNV101</a>
+			</td>
+			<td>15</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=15">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>2:00PM-2:50PM</td>
+			<td>Popplewell Hall 207</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the STEM&nbsp;
+					(Science, Technology, Engineering & Mathematics Focus Area.)&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11560</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=16">UNV101</a>
+			</td>
+			<td>16</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=16">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>2:00PM-2:50PM</td>
+			<td>Murphy Hall 220</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11559</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=17">UNV101</a>
+			</td>
+			<td>17</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=17">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>10:00AM-10:50AM</td>
+			<td>Murphy Hall 220</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Humanities&nbsp;
+					Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11600</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=18">UNV101</a>
+			</td>
+			<td>18</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=18">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>12:30PM-1:50PM</td>
+			<td>Popplewell Hall 105</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Social &&nbsp;
+					Behavioral Science Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11603</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=19">UNV101</a>
+			</td>
+			<td>19</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=19">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>12:30PM-1:50PM</td>
+			<td>Popplewell Hall 201</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the STEM&nbsp;
+					(Science, Technology, Engineering & Mathematics) Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>12459</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=20">UNV101</a>
+			</td>
+			<td>20</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=20">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>MWF</td>
+			<td>10:00AM-10:50AM</td>
+			<td>Griffon Indoor Sports Complex 113</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>11546</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=23">UNV101</a>
+			</td>
+			<td>23</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=23">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>9:30AM-10:50AM</td>
+			<td>Spratt Hall 205</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for studens interested in the Health&nbsp;
+					Sciences & Health Careers Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>12472</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=24">UNV101</a>
+			</td>
+			<td>24</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=24">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>5:00PM-6:20PM</td>
+			<td>Murphy Hall 113</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This is a general section for any major.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>12878</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=28">UNV101</a>
+			</td>
+			<td>28</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=28">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td>TR</td>
+			<td>11:00AM-12:20PM</td>
+			<td>Murphy Hall 103</td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				This section is for students interested in the Health&nbsp;
+					Sciences & Health Careers Focus Area.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>13691</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=40">UNV101</a>
+			</td>
+			<td>40</td>
+			<td>100% Online</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=101&seq_number_key=40">Foundations of Univ Experience</a></td>
+			<td>3</td>
+			<td></td>
+			<td>-</td>
+			<td>Online Course </td>
+			<td>Staff</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 25-->
+						Maximum Enrollment: 25<br />
+						Section Seats Available: 25<br />
+
+					</span>
+
+				</span>
+				This is a general section for any major.&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Distance Education
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14897</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=01">UNV198</a>
+			</td>
+			<td>01</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=01">The University Experience</a></td>
+			<td>1</td>
+			<td>M</td>
+			<td>12:00PM-12:50PM</td>
+			<td>Agenstein Hall 326</td>
+			<td>Ducey, M</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Chemistry&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14928</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=02">UNV198</a>
+			</td>
+			<td>02</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=02">The University Experience</a></td>
+			<td>1</td>
+			<td>T</td>
+			<td>9:30AM-10:20AM</td>
+			<td>Murphy Hall 220</td>
+			<td>Britton, P</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Art&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14949</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=03">UNV198</a>
+			</td>
+			<td>03</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=03">The University Experience</a></td>
+			<td>1</td>
+			<td>M</td>
+			<td>2:00PM-2:50PM</td>
+			<td>Agenstein Hall 330</td>
+			<td>Kendall-Morwick, J</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Computer Science, Math & Physics&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14955</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=04">UNV198</a>
+			</td>
+			<td>04</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=04">The University Experience</a></td>
+			<td>1</td>
+			<td>W</td>
+			<td>1:00PM-1:50PM</td>
+			<td>Murphy Hall 109</td>
+			<td>Thorne Wallington, E</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Education&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14950</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=05">UNV198</a>
+			</td>
+			<td>05</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=05">The University Experience</a></td>
+			<td>1</td>
+			<td>W</td>
+			<td>2:00PM-2:50PM</td>
+			<td>Popplewell Hall 202</td>
+			<td>Kovacs, M</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Economics, Political Science & Sociology&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14956</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=06">UNV198</a>
+			</td>
+			<td>06</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=06">The University Experience</a></td>
+			<td>1</td>
+			<td>T</td>
+			<td>9:30AM-10:20AM</td>
+			<td>Popplewell Hall 202</td>
+			<td>Moore, W</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Engineering Technology&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14929</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=07">UNV198</a>
+			</td>
+			<td>07</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=07">The University Experience</a></td>
+			<td>1</td>
+			<td>M</td>
+			<td>12:00PM-12:50PM</td>
+			<td>Looney Complex 227</td>
+			<td>Hanson, S</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Theater, Cinema & Dance&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14946</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=08">UNV198</a>
+			</td>
+			<td>08</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=08">The University Experience</a></td>
+			<td>1</td>
+			<td>M</td>
+			<td>9:00AM-9:50AM</td>
+			<td>Popplewell Hall 101</td>
+			<td>Waggoner, C</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Business&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14947</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=09">UNV198</a>
+			</td>
+			<td>09</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=09">The University Experience</a></td>
+			<td>1</td>
+			<td>T</td>
+			<td>2:00PM-2:50PM</td>
+			<td>Popplewell Hall 207</td>
+			<td>Waggoner, C</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Business&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14952</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=10">UNV198</a>
+			</td>
+			<td>10</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=10">The University Experience</a></td>
+			<td>1</td>
+			<td>T</td>
+			<td>9:30AM-10:20AM</td>
+			<td>Murphy Hall 218</td>
+			<td>Jackson, J</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Communications & Journalism&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14953</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=11">UNV198</a>
+			</td>
+			<td>11</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=11">The University Experience</a></td>
+			<td>1</td>
+			<td>W</td>
+			<td>10:00AM-10:50AM</td>
+			<td>Popplewell Hall 202</td>
+			<td>Atkinson, J</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Communications & Journalism&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14959</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=12">UNV198</a>
+			</td>
+			<td>12</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=12">The University Experience</a></td>
+			<td>1</td>
+			<td>W</td>
+			<td>1:00PM-1:50PM</td>
+			<td>Murphy Hall 206</td>
+			<td>Collins Keller, A</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Nursing&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+		<tr class="list_row">
+			<td>14960</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=40">UNV198</a>
+			</td>
+			<td>40</td>
+			<td>100% Online</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=UNV&crse_number=198&seq_number_key=40">The University Experience</a></td>
+			<td>1</td>
+			<td></td>
+			<td>-</td>
+			<td>Online Course </td>
+			<td>Stewart, S</td>
+		</tr>
+
+		<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 0-->
+						Maximum Enrollment: 0<br />
+						Section Seats Available: 0<br />
+
+					</span>
+
+							<span class="course_full">Contact Department</span>
+
+				</span>
+				Nursing-Dual credit section only&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					&nbsp;
+					<br>
+
+				<span class="course_messages">
+
+				</span>
+				<span class="course_term">
+					Distance Education
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+</table>
+
+	</div>
