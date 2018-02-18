@@ -36,6 +36,7 @@ public class Main {
 
             * */
             getSubjects("https://aps2.missouriwestern.edu/schedule/?tck=201830");
+            getDepartments("https://aps2.missouriwestern.edu/schedule/?tck=201830");
 //            usingGet("https://aps2.missouriwestern.edu/schedule/?tck=201830");
 //            usingPost("https://aps2.missouriwestern.edu/schedule/?tck=201830");
 //            usingGet("https://webservices.missouriwestern.edu/users/noynaert/csc346/target.php?firstName=tommy&car=truck");
@@ -70,23 +71,40 @@ public class Main {
             Document document = Jsoup.connect(addr).get();
             int i = 2;
             while (true) {
-//                String subjectAbbrev = Node.attr(String key);
+
                 Element subjectFull = document.select("#subject > option:nth-child(" + i + ")").first();
+                String subjectAbbrev = subjectFull.attr("value");
+
                 if (subjectFull == null) break;
-                System.out.println(subjectFull.text());
-//                System.out.println(subjectAbbrev.text());
+                System.out.println(subjectAbbrev + " " + subjectFull.text());
                 //Add size.text() to your list
                 i++;
             }
-//            Elements sizes = document.select("");
-//            sizesAvailable = new String[sizes.size()];
-//            for (int i = 0; i < sizes.size(); i++) {
-//                sizesAvailable[i] = sizes.get(i).text();
-//            }
         } catch (IOException e) {
             e.printStackTrace();
         }
         return subjects;
+    }
+
+    public static ArrayList<Element> getDepartments(String addr) {
+        ArrayList<Element> departments = null;
+        try {
+            Document document = Jsoup.connect(addr).get();
+            int i = 2;
+            while (true) {
+
+                Element deptFull = document.select("#department > option:nth-child(" + i + ")").first();
+                String deptAbbrev = deptFull.attr("value");
+
+                if (deptFull == null) break;
+                System.out.println(deptAbbrev + " " + deptFull.text());
+                //Add size.text() to your list
+                i++;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return departments;
     }
 
 }
