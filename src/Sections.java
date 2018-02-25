@@ -12,7 +12,8 @@ public class Sections {
     String room;
     String instuctor;
 
-    public Sections(String CRN, String courseURL, String course, String secNumber, String type, String title, String credits, String days, String hours, String room, String instructor){
+    public Sections(String department, String CRN, String courseURL, String course, String secNumber, String type, String title, String credits, String days, String hours, String room, String instructor){
+        setDepartment(department);
         setCRN(CRN);
         setCourseURL(courseURL);
         setCourse(course);
@@ -124,6 +125,6 @@ public class Sections {
 
     @Override
     public String toString() {
-        return String.format("%s     %s    %s      %s      %s", course, secNumber, title, days, instuctor);
+        return String.format("%s    %s     %s    %s      %s      %s", department, course, secNumber, title, days, instuctor);
     }
 }
