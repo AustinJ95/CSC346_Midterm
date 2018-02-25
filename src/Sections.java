@@ -1,6 +1,6 @@
 public class Sections {
     String department;
-    String crn;
+    String CRN;
     String courseURL;
     String course;
     String secNumber;
@@ -10,10 +10,20 @@ public class Sections {
     String days;
     String hours;
     String room;
-    String Instructor;
+    String instuctor;
 
-    public Sections(String crn, String courseURL, String course, String secNumber, String type, String title, String credits, String days, String hours, String room, String instructor){
-
+    public Sections(String CRN, String courseURL, String course, String secNumber, String type, String title, String credits, String days, String hours, String room, String instructor){
+        setCRN(CRN);
+        setCourseURL(courseURL);
+        setCourse(course);
+        setSecNumber(secNumber);
+        setType(type);
+        setTitle(title);
+        setCredits(credits);
+        setDays(days);
+        setHours(hours);
+        setRoom(room);
+        setInstructor(instructor);
     }
 
     public String getDepartment() {
@@ -24,12 +34,12 @@ public class Sections {
         this.department = department;
     }
 
-    public String getCrn() {
-        return crn;
+    public String getCRN() {
+        return CRN;
     }
 
-    public void setCrn(String crn) {
-        this.crn = crn;
+    public void setCRN(String CRN) {
+        this.CRN = CRN;
     }
 
     public String getCourseURL() {
@@ -105,10 +115,15 @@ public class Sections {
     }
 
     public String getInstructor() {
-        return Instructor;
+        return instuctor;
     }
 
     public void setInstructor(String instructor) {
-        Instructor = instructor;
+        this.instuctor = instructor;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s     %s    %s      %s      %s", course, secNumber, title, days, instuctor);
     }
 }
