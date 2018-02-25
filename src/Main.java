@@ -46,18 +46,6 @@ public class Main {
     }
 
     public static void getSections(String department) {
-        String crn;
-        String courseURL;
-        String course;
-        String sectionNumber;
-        String type;
-        String title;
-        String credits;
-        String days;
-        String times;
-        String room;
-        String instructor;
-
         Document doc = getPost(department);
         Elements resultTable = doc.select("div#maincontent > table.results");
         Elements courseGeneral = resultTable.select("tr.list_row");
@@ -66,17 +54,17 @@ public class Main {
         for (Element row : courseGeneral) {
             Elements td = row.select("td");
             if (td.size()==10) {
-                crn = td.get(0).text();
+                String crn = td.get(0).text();
                 //String courseURL = td.get(1).text();
-                course = td.get(1).text();
-                sectionNumber = td.get(2).text();
-                type = td.get(3).text();
-                title = td.get(4).text();
-                credits = td.get(5).text();
-                days = td.get(6).text();
-                times = td.get(7).text();
-                room = td.get(8).text();
-                instructor = td.get(9).text();
+                String course = td.get(1).text();
+                String sectionNumber = td.get(2).text();
+                String type = td.get(3).text();
+                String title = td.get(4).text();
+                String credits = td.get(5).text();
+                String days = td.get(6).text();
+                String times = td.get(7).text();
+                String room = td.get(8).text();
+                String instructor = td.get(9).text();
 
                 Sections section = new Sections(department, crn, "Place Holder URL", course, sectionNumber, type, title, credits, days, times, room, instructor);
                 courseList.add(section);
