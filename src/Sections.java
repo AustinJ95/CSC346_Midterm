@@ -1,4 +1,6 @@
-public class Sections {
+import java.util.ArrayList;
+
+public class Sections{
     String department;
     String CRN;
     String courseURL;
@@ -125,6 +127,29 @@ public class Sections {
 
     @Override
     public String toString() {
-        return String.format("%s    %s     %s    %s      %s      %s", department, course, secNumber, title, days, instuctor);
+        return String.format("%s    %s     %s    %s      %s      %s", department, CRN, course, secNumber, title, instuctor);
+    }
+
+    public static void removeDuplicateCourses(ArrayList<Sections> courseList){
+        Sections tempCourse;
+        for (int i=0; i<courseList.size(); i++){
+            tempCourse = courseList.get(i);
+            for (int j=0; j<courseList.size()-1; j++){
+                if (tempCourse.getCRN().compareTo(courseList.get(j).getCRN()) == 0){
+                    courseList.remove(j);
+                }
+            }
+        }
+    }
+
+    public int compareTo(Sections other){
+        int result;
+        if (getCourse().compareTo(other.getCourse()) > 0){
+            result = -1;
+        } else if (getCourse().compareTo(other.getCourse()) < 0){
+            result = 1;
+        } else
+            result = 0;
+        return result;
     }
 }
