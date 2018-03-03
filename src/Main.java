@@ -9,7 +9,7 @@ import java.util.ArrayList;
 //landing page url="https://aps2.missouriwestern.edu/schedule/default.asp?tck=201910"
 //TODO: retrieve information from the detail_row class of <tr> in the schedule table
 //TODO: sort sections based on department
-//COMPLETED TODO: remove duplicate courses from the courseList ArrayList
+//COMPLETED: remove duplicate courses from the courseList ArrayList
 //TODO: add courses to the previously created database
 //TODO: create method to update courseList based on department
 
@@ -19,11 +19,21 @@ public class Main {
     static final String BASEURL = "https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910";
 
     public static void main(String[] args){
+        //getCourses("ART"); //tests individual departments
+        //System.out.println(courseList.get(0));//prints out specified number of entries in courseList
+        getAllCourses();//scrapes all departments NOTE: Takes a long time to run
+        printOUT();//prints first 100 entries ArrayList courseList out
+    }
+
+    public static void getAllCourses(){
         addDepartments();
         for (String dept: departments) {
             getSections(dept);
         }
         Sections.removeDuplicateCourses(courseList);
+    }
+
+    public static void printOUT(){
         for (int i=0; i<100; i++){
             System.out.println(courseList.get(i));
         }
@@ -76,7 +86,7 @@ public class Main {
             Elements td = row.select("td");
             if (td.size()==10) {
                 CRN = td.get(0).text();
-                //URL = td.get(1).text();
+                URL = "https://aps2.missouriwestern.edu/schedule/" + td.select("a").first().attr("href");
                 course = td.get(1).text();
                 sectionNumber = td.get(2).text();
                 type = td.get(3).text();
@@ -87,7 +97,7 @@ public class Main {
                 room = td.get(8).text();
                 instructor = td.get(9).text();
 
-                Sections section = new Sections(department, CRN, "Place Holder URL", course, sectionNumber, type, title, credits, days, times, room, instructor);
+                Sections section = new Sections(department, CRN, URL, course, sectionNumber, type, title, credits, days, times, room, instructor);
                 courseList.add(section);
             }
         }

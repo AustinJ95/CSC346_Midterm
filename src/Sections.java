@@ -127,7 +127,7 @@ public class Sections{
 
     @Override
     public String toString() {
-        return String.format("%s    %s     %s    %s      %s      %s", department, CRN, course, secNumber, title, instuctor);
+        return String.format("%s    %s     %s    %s      %s      %s", department, CRN, course, courseURL, title, instuctor);
     }
 
     public static void removeDuplicateCourses(ArrayList<Sections> courseList){
