@@ -23,7 +23,7 @@ public class Main {
         addDisciplines();
         addDepartments();
         removeCoursesBasedOnDepartmentDB("ALL");//clears table
-        updateDepartment("ALL");//scrapes all departments or individual departments NOTE: Takes a long time to run
+        updateDepartment("ART");//scrapes all departments or individual departments NOTE: Takes a long time to run
         //getCourses("ART", courseList); //tests individual departments
         //System.out.println(courseList.get(0));//prints out specified entry in courseList
         //printOUT();//prints first 100 entries ArrayList courseList out
@@ -211,10 +211,16 @@ public class Main {
                     times = times + "\n" + tdGeneral.get(2).text().trim();
                     room = room + "\n" + tdGeneral.get(3).text();
                 }
-            }if (!(CRN==0)) {
+            }
+            if (className.equals("detail_row")){
+                courseTerm = tdGeneral.select("span.course_term").text();
+                startDate = tdGeneral.select("span.course_begins").text().trim();
+                endDate = tdGeneral.select("span.course_ends").text().trim();
+            }
+            if (!(CRN==0)) {
                 Sections section = new Sections(department, CRN, URL, course, sectionNumber, type, title, credits,
                         days, times, room, instructor, maxEnrollment, availableSeats, courseNote, courseFees,
-                        feeTitles, perCourse, perCredit, startDate, endDate);
+                        feeTitles, perCourse, perCredit, courseTerm, startDate, endDate);
                 list.add(section);
             }
         }
@@ -237,11 +243,15 @@ public class Main {
     }
 
     public static void addDepartments() {
-        /*String getDepartments = "";
+        /*        String getDepartments = "SELECT SubAbbrev, SubFullName FROM subject";
         try {
             Connection conn = sqlite.getConn();
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery(getDepartments);
+            while (rs.next()){
+                Discipline discipline = new Discipline(rs.getString("SubAbbrev"), rs.getString("SubFullName"));
+                disciplines.add(discipline);
+            }
         } catch (SQLException e){
             System.err.println(e.getMessage());
         }*/
@@ -270,11 +280,11 @@ public class Main {
     }
 
     public static void addDisciplines(){
-        String getDepartments = "SELECT SubAbbrev, SubFullName FROM subject";
+        String getDisciplines = "SELECT SubAbbrev, SubFullName FROM subject";
         try {
             Connection conn = sqlite.getConn();
             Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery(getDepartments);
+            ResultSet rs = statement.executeQuery(getDisciplines);
             while (rs.next()){
                 Discipline discipline = new Discipline(rs.getString("SubAbbrev"), rs.getString("SubFullName"));
                 disciplines.add(discipline);

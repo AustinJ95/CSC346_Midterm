@@ -31,7 +31,7 @@ public class Sections{
     public Sections(String department, int CRN, String courseURL, String course, int secNumber, String type,
                     String title, int credits, String days, String hours, String room, String instructor,
                     int maxEnrollment, int availableSeats, String courseNote, String courseFees, String feeTitles,
-                    String perCourse, String perCredit, String startDate, String endDate){
+                    String perCourse, String perCredit, String courseTerm, String startDate, String endDate){
 
         setDepartment(department);
         setCRN(CRN);
@@ -54,6 +54,7 @@ public class Sections{
         setFeeTitles(feeTitles);
         setPerCourse(perCourse);
         setPerCredit(perCredit);
+        setCourseTerm(courseTerm);
         setStartDate(startDate);
         setEndDate(endDate);
     }
@@ -183,7 +184,10 @@ public class Sections{
     }
 
     public void setStartDate(String startDate) {
-        this.startDate = startDate;
+        if (!(startDate.length()==0)) {
+            this.startDate = startDate.substring(14);
+        } else
+            this.startDate = startDate;
     }
 
     public String getEndDate() {
@@ -191,7 +195,10 @@ public class Sections{
     }
 
     public void setEndDate(String endDate) {
-        this.endDate = endDate;
+        if (!(endDate.length()==0)) {
+            this.endDate = endDate.substring(12);
+        } else
+            this.endDate = endDate;
     }
 
     public String getDepartment() {
