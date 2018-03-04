@@ -42,34 +42,37 @@ public class Main {
 
     public static void insertCourses(ArrayList<Sections> list) {
         try {
+            connectToDB();
             for (int i = 0; i < list.size(); i++) {
                 int CRN = list.get(i).getCRN();
                 String URL = list.get(i).getURL();
                 String course = list.get(i).getCourse();
+                String discipline = list.get(i).getDiscipline();
                 String department = list.get(i).getDepartment();
                 int sectionNumber = list.get(i).getSectionNumber();
                 String type = list.get(i).getType();
-                String title = courseList.get(i).getTitle();
-                int credits = courseList.get(i).getCredits();
-                String days = courseList.get(i).getDays();
-                String times = courseList.get(i).getTimes();
-                String room = courseList.get(i).getRoom();
-                String instructor = courseList.get(i).getInstructor();
-                int maxEnrollment = courseList.get(i).getMaxEnrollment();
-                int availableSeats = courseList.get(i).getAvailableSeats();
-                String courseNote = courseList.get(i).getCourseNote();
-                String courseFees = courseList.get(i).getCourseFees();
-                String feeTitles = courseList.get(i).getFeeTitles();
-                String perCourse = courseList.get(i).getPerCourse();
-                String perCredit = courseList.get(i).getPerCredit();
-                String courseTerm = courseList.get(i).getCourseTerm();
-                String startDate = courseList.get(i).getStartDate();
-                String endDate = courseList.get(i).getEndDate();
+                String title = list.get(i).getTitle();
+                int credits = list.get(i).getCredits();
+                String days = list.get(i).getDays();
+                String times = list.get(i).getTimes();
+                String room = list.get(i).getRoom();
+                String instructor = list.get(i).getInstructor();
+                int maxEnrollment = list.get(i).getMaxEnrollment();
+                int availableSeats = list.get(i).getAvailableSeats();
+                String courseNote = list.get(i).getCourseNote();
+                String courseFees = list.get(i).getCourseFees();
+                String feeTitles = list.get(i).getFeeTitles();
+                String perCourse = list.get(i).getPerCourse();
+                String perCredit = list.get(i).getPerCredit();
+                String courseTerm = list.get(i).getCourseTerm();
+                String startDate = list.get(i).getStartDate();
+                String endDate = list.get(i).getEndDate();
 
-                String sql = "INSERT INTO COURSES(" +
+                String sql1 = "INSERT or REPLACE INTO COURSES(" +
                         "CRN," +
                         "COURSE," +
                         "COURSE_NAME," +
+                        "DISCIPLINE," +
                         "DEPARTMENT," +
                         "SECTION_NUMBER," +
                         "CLASS_TYPE," +
@@ -79,7 +82,7 @@ public class Main {
                         "LOCATION," +
                         "INSTRUCTOR," +
                         "MAX_INROLLMENT," +
-                        "SEATS_AVAILABLE," +
+                        "AVAILABLE_SEATS," +
                         "COURSE_NOTE," +
                         "COURSE_FEES," +
                         "FEE_TITLES," +
@@ -89,37 +92,42 @@ public class Main {
                         "START_DATE," +
                         "END_DATE," +
                         "COURSE_URL) " +
-                        "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                        "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-                PreparedStatement prpStmt = conn.prepareStatement(sql);
-                prpStmt.setInt(1, CRN);
-                prpStmt.setString(2, course);
-                prpStmt.setString(3, title);
-                prpStmt.setString(4, department);
-                prpStmt.setInt(5, sectionNumber);
-                prpStmt.setString(6, type);
-                prpStmt.setInt(6, credits);
-                prpStmt.setString(6, days);
-                prpStmt.setString(6, times);
-                prpStmt.setString(6, room);
-                prpStmt.setString(6, instructor);
-                prpStmt.setInt(6, maxEnrollment);
-                prpStmt.setInt(6, availableSeats);
-                prpStmt.setString(6, courseNote);
-                prpStmt.setString(6, courseFees);
-                prpStmt.setString(6, feeTitles);
-                prpStmt.setString(6, perCourse);
-                prpStmt.setString(6, perCredit);
-                prpStmt.setString(6, courseTerm);
-                prpStmt.setString(6, startDate);
-                prpStmt.setString(6, endDate);
-                prpStmt.setString(6, URL);
-                prpStmt.executeUpdate();
+                PreparedStatement add = conn.prepareStatement(sql1);
+                add.setInt(1, CRN);
+                add.setString(2, course);
+                add.setString(3, title);
+                add.setString(4, discipline);
+                add.setString(5, department);
+                add.setInt(6, sectionNumber);
+                add.setString(7, type);
+                add.setInt(8, credits);
+                add.setString(9, days);
+                add.setString(10, times);
+                add.setString(11, room);
+                add.setString(12, instructor);
+                add.setInt(13, maxEnrollment);
+                add.setInt(14, availableSeats);
+                add.setString(15, courseNote);
+                add.setString(16, courseFees);
+                add.setString(17, feeTitles);
+                add.setString(18, perCourse);
+                add.setString(19, perCredit);
+                add.setString(20, courseTerm);
+                add.setString(21, startDate);
+                add.setString(22, endDate);
+                add.setString(23, URL);
+                add.executeUpdate();
             }
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void removeCourses(){
+
     }
 
     public static void getAllCourses() {

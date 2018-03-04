@@ -4,6 +4,7 @@ public class Sections{
     int CRN;
     String URL;
     String course;
+    String discipline;
     String department;
     int sectionNumber;
     String type;
@@ -33,6 +34,7 @@ public class Sections{
         setCRN(CRN);
         setCourseURL(courseURL);
         setCourse(course);
+        setDiscipline();
         setSecNumber(secNumber);
         setType(type);
         setTitle(title);
@@ -50,6 +52,14 @@ public class Sections{
         setPerCredit(perCredit);
         setStartDate(startDate);
         setEndDate(endDate);
+    }
+
+    public void setDiscipline(){
+        discipline = getCourse().substring(0,3);
+    }
+
+    public String getDiscipline(){
+        return discipline;
     }
 
     public String getURL() {
