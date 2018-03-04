@@ -9,40 +9,25 @@ import java.sql.*;
 import java.util.ArrayList;
 
 //landing page url="https://aps2.missouriwestern.edu/schedule/default.asp?tck=201910"
-//TODO: retrieve information from the detail_row class of <tr> in the schedule table
-//TODO: sort sections based on department
-//COMPLETED: remove duplicate courses from the courseList ArrayList
-//TODO: add courses to the previously created database
-//TODO: create method to update courseList based on department
 
 public class Main {
     static ArrayList<Sections> courseList = new ArrayList<>();
     static ArrayList<String> departments = new ArrayList<>();
     static final String BASEURL = "https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910";
-    static String DBFileName = "midtermdb.db";
-    static Connection conn;
+    static SQLITE sqlite = new SQLITE();
 
     public static void main(String[] args) {
+        sqlite.connectToDB();
         getCourses("ART"); //tests individual departments
         //System.out.println(courseList.get(0));//prints out specified number of entries in courseList
         //getAllCourses();//scrapes all departments NOTE: Takes a long time to run
         insertCourses(courseList);
         //printOUT();//prints first 100 entries ArrayList courseList out
-    }
-
-    public static void connectToDB() {
-        String DBPath = "jdbc:sqlite:" + DBFileName;
-        conn = null;
-        try {
-            conn = DriverManager.getConnection(DBPath);
-        } catch (SQLException e) {
-            System.err.println(e.getMessage());
-        }
+        sqlite.closeDB();
     }
 
     public static void insertCourses(ArrayList<Sections> list) {
         try {
-            connectToDB();
             for (int i = 0; i < list.size(); i++) {
                 int CRN = list.get(i).getCRN();
                 String URL = list.get(i).getURL();
@@ -94,7 +79,7 @@ public class Main {
                         "COURSE_URL) " +
                         "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-                PreparedStatement add = conn.prepareStatement(sql1);
+                PreparedStatement add = sqlite.getConn().prepareStatement(sql1);
                 add.setInt(1, CRN);
                 add.setString(2, course);
                 add.setString(3, title);
@@ -120,7 +105,6 @@ public class Main {
                 add.setString(23, URL);
                 add.executeUpdate();
             }
-            conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
