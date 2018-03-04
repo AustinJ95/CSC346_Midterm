@@ -13,15 +13,17 @@ import java.util.ArrayList;
 public class Main {
     static ArrayList<Sections> courseList = new ArrayList<>();
     static ArrayList<String> departments = new ArrayList<>();
+    static ArrayList<Sections> tempArrayList = new ArrayList<>();
     static final String BASEURL = "https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910";
     static SQLITE sqlite = new SQLITE();
 
     public static void main(String[] args) {
         sqlite.connectToDB();
-        getCourses("ART"); //tests individual departments
-        //System.out.println(courseList.get(0));//prints out specified number of entries in courseList
-        //getAllCourses();//scrapes all departments NOTE: Takes a long time to run
-        insertCourses(courseList);
+        addDepartments();
+        removeCoursesBasedOnDepartmentDB("ALL");//clears table
+        updateDepartment("ALL");//scrapes all departments NOTE: Takes a long time to run
+        //getCourses("ART", courseList); //tests individual departments
+        //System.out.println(courseList.get(0));//prints out specified entry in courseList
         //printOUT();//prints first 100 entries ArrayList courseList out
         sqlite.closeDB();
     }
@@ -110,16 +112,21 @@ public class Main {
         }
     }
 
-    public static void removeCourses(){
-
-    }
-
-    public static void getAllCourses() {
-        addDepartments();
-        for (String dept : departments) {
-            getCourses(dept);
+    public static void removeCoursesBasedOnDepartmentDB(String department){
+        try {
+            if (department.equals("ALL")){
+                String deleteSQL = "DELETE FROM COURSES";
+                PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
+                delete.executeUpdate();
+            }else {
+                String deleteSQL = "DELETE FROM COURSES WHERE DEPARTMENT = ?";
+                PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
+                delete.setString(1, department);
+                delete.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        Sections.removeDuplicateCourses(courseList);
     }
 
     public static void printOUT() {
@@ -143,8 +150,6 @@ public class Main {
                     .followRedirects(true)
                     .execute();
             doc = response.parse();
-            System.out.println("Connected to: https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910.");
-            System.out.printf("Please do not close. Program is parsing using %s.\n", department);
         } catch (IOException e) {
             System.err.println(e.getMessage());
         } finally {
@@ -152,64 +157,82 @@ public class Main {
         }
     }
 
-    public static void getCourses(String department) {
-        int CRN;
-        String URL;
-        String course;
-        int sectionNumber;
-        String type;
-        String title;
-        int credits;
-        String days;
-        String times;
-        String room;
-        String instructor;
-        int maxEnrollment;
-        int availableSeats;
-        String courseNote;
-        String courseFees;
-        String feeTitles;
-        String perCourse;
-        String perCredit;
-        String courseTerm;
-        String startDate;
-        String endDate;
+    public static void getCourses(String department, ArrayList<Sections> list) {
+        int CRN = 0;
+        String URL = "";
+        String course = "";
+        int sectionNumber = 0;
+        String type = "";
+        String title = "";
+        int credits = 0;
+        String days = "";
+        String times = "";
+        String room = "";
+        String instructor = "";
+        int maxEnrollment = 0;
+        int availableSeats = 0;
+        String courseNote = "";
+        String courseFees = "";
+        String feeTitles = "";
+        String perCourse = "";
+        String perCredit = "";
+        String courseTerm = "";
+        String startDate = "";
+        String endDate = "";
 
         Document doc = getPost(department);
         Elements resultTable = doc.select("div#maincontent > table.results");
-        Elements courseGeneral = resultTable.select("tr.list_row");
+        Elements courseGeneral = resultTable.select("tr");
         Elements courseSpecific = resultTable.select("tr.detail_row");
+        Elements courseGeneralException = resultTable.select("tr.list_row + tr.list_row");
 
-        for (Element row : courseGeneral) {
-            Elements td = row.select("td");
-            if (td.size() == 10) {
-                CRN = Integer.parseInt(td.get(0).text());
-                URL = "https://aps2.missouriwestern.edu/schedule/" + td.select("a").first().attr("href");
-                course = td.get(1).text();
-                sectionNumber = Integer.parseInt(td.get(2).text());
-                type = td.get(3).text();
-                title = td.get(4).text();
-                credits = Integer.parseInt(td.get(5).text());
-                days = td.get(6).text();
-                times = td.get(7).text();
-                room = td.get(8).text();
-                instructor = td.get(9).text();
-
+        System.out.printf("Scraping based on Department:%s\n", department);
+        for (Element rowGeneral : courseGeneral) {
+            String className = rowGeneral.attr("class");
+            Elements tdGeneral = rowGeneral.select("td");
+            if (className.equals("list_row")) {
+                if (tdGeneral.size()==10) {
+                    CRN = Integer.parseInt(tdGeneral.get(0).text().trim());
+                    URL = "https://aps2.missouriwestern.edu/schedule/" + tdGeneral.select("a").first().attr("href");
+                    course = tdGeneral.get(1).text().trim();
+                    sectionNumber = Integer.parseInt(tdGeneral.get(2).text().trim());
+                    type = tdGeneral.get(3).text().trim();
+                    title = tdGeneral.get(4).text();
+                    credits = Integer.parseInt(tdGeneral.get(5).text().substring(0, 1).trim());
+                    days = tdGeneral.get(6).text().trim();
+                    times = tdGeneral.get(7).text().trim();
+                    room = tdGeneral.get(8).text();
+                    instructor = tdGeneral.get(9).text();
+                }
+                else{
+                    days = days + "\n" + tdGeneral.get(1).text().trim();
+                    times = times + "\n" + tdGeneral.get(2).text().trim();
+                    room = room + "\n" + tdGeneral.get(3).text();
+                }
+            }if (!(CRN==0)) {
                 Sections section = new Sections(department, CRN, URL, course, sectionNumber, type, title, credits,
-                        days, times, room, instructor, 0, 0, null, null,
-                        null, null, null, null, null);
-                courseList.add(section);
+                        days, times, room, instructor, maxEnrollment, availableSeats, courseNote, courseFees,
+                        feeTitles, perCourse, perCredit, startDate, endDate);
+                list.add(section);
+                System.out.println(section);//only for debugging
             }
-        }
-        for (Element row : courseSpecific) {
-            Elements span = row.select("span");
-
         }
     }
 
-    public static void updateDepartment(ArrayList<Sections> courseList) {
-
-        Sections.removeDuplicateCourses(courseList);
+    public static void updateDepartment(String department) {
+        if (department.equals("ALL")){
+            Sections.removeALL();
+            removeCoursesBasedOnDepartmentDB(department);
+            for (String dpt: departments){
+                getCourses(dpt, tempArrayList);
+            }
+        } else {
+            Sections.removeBasedOnDepartmentList(department);
+            removeCoursesBasedOnDepartmentDB(department);
+            getCourses(department, tempArrayList);
+        }
+        insertCourses(tempArrayList);
+        Sections.removeALL();
     }
 
     public static void addDepartments() {

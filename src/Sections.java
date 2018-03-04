@@ -1,11 +1,11 @@
-import java.util.ArrayList;
-
 public class Sections{
     int CRN;
     String URL;
     String course;
     String discipline;
+    String disciplineFull;
     String department;
+    String departmentFull;
     int sectionNumber;
     String type;
     String title;
@@ -55,7 +55,11 @@ public class Sections{
     }
 
     public void setDiscipline(){
-        discipline = getCourse().substring(0,3);
+        if (getCourse().length()<2){
+            discipline = "";
+        }else {
+            discipline = getCourse().substring(0, 3);
+        }
     }
 
     public String getDiscipline(){
@@ -267,26 +271,17 @@ public class Sections{
         return String.format("%s    %d     %s    %s      %s      %s", department, CRN, course, URL, title, instructor);
     }
 
-    public static void removeDuplicateCourses(ArrayList<Sections> courseList){
-        Sections tempCourse;
-        for (int i=0; i<courseList.size(); i++){
-            tempCourse = courseList.get(i);
-            for (int j=0; j<courseList.size()-1; j++){
-                if (tempCourse.getCRN() - (courseList.get(j).getCRN()) == 0){
-                    courseList.remove(j);
-                }
+    public static void removeBasedOnDepartmentList(String department){
+        for (int i=0; i<Main.tempArrayList.size(); i++){
+            if (Main.tempArrayList.get(i).getDepartment().equals(department)){
+                Main.tempArrayList.remove(i);
             }
         }
     }
 
-    public int compareTo(Sections other){
-        int result;
-        if (getCourse().compareTo(other.getCourse()) > 0){
-            result = -1;
-        } else if (getCourse().compareTo(other.getCourse()) < 0){
-            result = 1;
-        } else
-            result = 0;
-        return result;
+    public static void removeALL(){
+        for (int i=0; i<Main.tempArrayList.size(); i++){
+            Main.tempArrayList.remove(i);
+        }
     }
 }
