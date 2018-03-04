@@ -1,0 +1,51 @@
+Examples of detail_row class of rows and the exception of 5 rows for list_row class of rows
+
+<tr class="detail_row">
+			<td colspan="10" class="detail_cell">
+				<span class="course_enrollment">
+
+					<span class="course_seats">
+						<!--Seats Available:  of 65-->
+						Maximum Enrollment: 65<br />
+						Section Seats Available: 59<br />
+
+					</span>
+
+				</span>
+
+				<span class="course_messages">
+					 <span class="course_fees">ADDITIONAL FEE: Art Materials Fee    20.00 FLAT&nbsp;&nbsp;(Flat Fee)</span>
+					 <span class="course_fees">ADDITIONAL FEE: Fine Arts Program Fee    39.70 CRED&nbsp;&nbsp;(per Credit Hour fee)</span>
+				</span>
+				<span class="course_term">
+					Full Term
+				</span>
+				<span class="course_dates">
+					<span class="course_begins">Course Begins: 8/27/2018</span>
+					<span class="course_ends">Course Ends: 12/14/2018</span>
+				</span>
+			</td>
+		</tr>
+
+<tr class="list_row">
+			<td>10480</td>
+			<td>
+				<a href="default.asp?tck=201910&page=details&subj_code=MAT&crse_number=167&seq_number_key=01">MAT167</a>
+			</td>
+			<td>01</td>
+			<td>Lecture, 100% in Classroom</td>
+			<td><a href="default.asp?tck=201910&page=details&subj_code=MAT&crse_number=167&seq_number_key=01">Calculus/Analytic Geometry I</a></td>
+			<td>5</td>
+			<td>MF</td>
+			<td>8:00AM-8:50AM</td>
+			<td>Agenstein Hall 123</td>
+			<td>Staff</td>
+		</tr>
+
+			<tr class="list_row">
+				<td colspan="6">&nbsp;</td>
+				<td>TR</td>
+				<td>8:00AM-9:20AM</td>
+				<td>Agenstein Hall 123</td>
+				<td>&nbsp;</td>
+			</tr>

@@ -1,20 +1,34 @@
 import java.util.ArrayList;
 
 public class Sections{
-    String department;
-    String CRN;
-    String courseURL;
+    int CRN;
+    String URL;
     String course;
-    String secNumber;
+    String department;
+    int sectionNumber;
     String type;
     String title;
-    String credits;
+    int credits;
     String days;
-    String hours;
+    String times;
     String room;
-    String instuctor;
+    String instructor;
+    int maxEnrollment;
+    int availableSeats;
+    String courseNote;
+    String courseFees;
+    String feeTitles;
+    String perCourse;
+    String perCredit;
+    String courseTerm;
+    String startDate;
+    String endDate;
 
-    public Sections(String department, String CRN, String courseURL, String course, String secNumber, String type, String title, String credits, String days, String hours, String room, String instructor){
+    public Sections(String department, int CRN, String courseURL, String course, int secNumber, String type,
+                    String title, int credits, String days, String hours, String room, String instructor,
+                    int maxEnrollment, int availableSeats, String courseNote, String courseFees, String feeTitles,
+                    String perCourse, String perCredit, String startDate, String endDate){
+
         setDepartment(department);
         setCRN(CRN);
         setCourseURL(courseURL);
@@ -27,6 +41,119 @@ public class Sections{
         setHours(hours);
         setRoom(room);
         setInstructor(instructor);
+        setMaxEnrollment(maxEnrollment);
+        setAvailableSeats(availableSeats);
+        setCourseNote(courseNote);
+        setCourseFees(courseFees);
+        setFeeTitles(feeTitles);
+        setPerCourse(perCourse);
+        setPerCredit(perCredit);
+        setStartDate(startDate);
+        setEndDate(endDate);
+    }
+
+    public String getURL() {
+        return URL;
+    }
+
+    public void setURL(String URL) {
+        this.URL = URL;
+    }
+
+    public int getSectionNumber() {
+        return sectionNumber;
+    }
+
+    public void setSectionNumber(int sectionNumber) {
+        this.sectionNumber = sectionNumber;
+    }
+
+    public String getTimes() {
+        return times;
+    }
+
+    public void setTimes(String times) {
+        this.times = times;
+    }
+
+    public int getMaxEnrollment() {
+        return maxEnrollment;
+    }
+
+    public void setMaxEnrollment(int maxEnrollment) {
+        this.maxEnrollment = maxEnrollment;
+    }
+
+    public int getAvailableSeats() {
+        return availableSeats;
+    }
+
+    public void setAvailableSeats(int availableSeats) {
+        this.availableSeats = availableSeats;
+    }
+
+    public String getCourseNote() {
+        return courseNote;
+    }
+
+    public void setCourseNote(String courseNote) {
+        this.courseNote = courseNote;
+    }
+
+    public String getCourseFees() {
+        return courseFees;
+    }
+
+    public void setCourseFees(String courseFees) {
+        this.courseFees = courseFees;
+    }
+
+    public String getFeeTitles() {
+        return feeTitles;
+    }
+
+    public void setFeeTitles(String feeTitles) {
+        this.feeTitles = feeTitles;
+    }
+
+    public String getPerCourse() {
+        return perCourse;
+    }
+
+    public void setPerCourse(String perCourse) {
+        this.perCourse = perCourse;
+    }
+
+    public String getPerCredit() {
+        return perCredit;
+    }
+
+    public void setPerCredit(String perCredit) {
+        this.perCredit = perCredit;
+    }
+
+    public String getCourseTerm() {
+        return courseTerm;
+    }
+
+    public void setCourseTerm(String courseTerm) {
+        this.courseTerm = courseTerm;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
     public String getDepartment() {
@@ -37,20 +164,20 @@ public class Sections{
         this.department = department;
     }
 
-    public String getCRN() {
+    public int getCRN() {
         return CRN;
     }
 
-    public void setCRN(String CRN) {
+    public void setCRN(int CRN) {
         this.CRN = CRN;
     }
 
     public String getCourseURL() {
-        return courseURL;
+        return URL;
     }
 
     public void setCourseURL(String courseURL) {
-        this.courseURL = courseURL;
+        this.URL = courseURL;
     }
 
     public String getCourse() {
@@ -61,12 +188,12 @@ public class Sections{
         this.course = course;
     }
 
-    public String getSecNumber() {
-        return secNumber;
+    public int getSecNumber() {
+        return sectionNumber;
     }
 
-    public void setSecNumber(String secNumber) {
-        this.secNumber = secNumber;
+    public void setSecNumber(int secNumber) {
+        this.sectionNumber = secNumber;
     }
 
     public String getType() {
@@ -85,11 +212,11 @@ public class Sections{
         this.title = title;
     }
 
-    public String getCredits() {
+    public int getCredits() {
         return credits;
     }
 
-    public void setCredits(String credits) {
+    public void setCredits(int credits) {
         this.credits = credits;
     }
 
@@ -102,11 +229,11 @@ public class Sections{
     }
 
     public String getHours() {
-        return hours;
+        return times;
     }
 
     public void setHours(String hours) {
-        this.hours = hours;
+        this.times = hours;
     }
 
     public String getRoom() {
@@ -118,16 +245,16 @@ public class Sections{
     }
 
     public String getInstructor() {
-        return instuctor;
+        return instructor;
     }
 
     public void setInstructor(String instructor) {
-        this.instuctor = instructor;
+        this.instructor = instructor;
     }
 
     @Override
     public String toString() {
-        return String.format("%s    %s     %s    %s      %s      %s", department, CRN, course, courseURL, title, instuctor);
+        return String.format("%s    %d     %s    %s      %s      %s", department, CRN, course, URL, title, instructor);
     }
 
     public static void removeDuplicateCourses(ArrayList<Sections> courseList){
@@ -135,7 +262,7 @@ public class Sections{
         for (int i=0; i<courseList.size(); i++){
             tempCourse = courseList.get(i);
             for (int j=0; j<courseList.size()-1; j++){
-                if (tempCourse.getCRN().compareTo(courseList.get(j).getCRN()) == 0){
+                if (tempCourse.getCRN() - (courseList.get(j).getCRN()) == 0){
                     courseList.remove(j);
                 }
             }
