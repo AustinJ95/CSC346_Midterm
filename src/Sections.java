@@ -1,3 +1,6 @@
+import java.sql.Connection;
+import java.sql.ResultSet;
+
 public class Sections{
     int CRN;
     String URL;
@@ -35,6 +38,7 @@ public class Sections{
         setCourseURL(courseURL);
         setCourse(course);
         setDiscipline();
+        setDisciplineFull();
         setSecNumber(secNumber);
         setType(type);
         setTitle(title);
@@ -52,6 +56,26 @@ public class Sections{
         setPerCredit(perCredit);
         setStartDate(startDate);
         setEndDate(endDate);
+    }
+
+    public String getDisciplineFull() {
+        return disciplineFull;
+    }
+
+    public void setDisciplineFull() {
+        int i=0;
+        while (!(getDiscipline().equals(Main.disciplines.get(i).getDisciplineAbbrev()) && i<Main.disciplines.size()) ){
+            i++;
+        }
+        disciplineFull = Main.disciplines.get(i).disciplineFull;
+    }
+
+    public String getDepartmentFull() {
+        return departmentFull;
+    }
+
+    public void setDepartmentFull(String departmentFull) {
+
     }
 
     public void setDiscipline(){

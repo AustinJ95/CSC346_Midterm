@@ -13,15 +13,17 @@ import java.util.ArrayList;
 public class Main {
     static ArrayList<Sections> courseList = new ArrayList<>();
     static ArrayList<String> departments = new ArrayList<>();
+    static ArrayList<Discipline> disciplines = new ArrayList<>();
     static ArrayList<Sections> tempArrayList = new ArrayList<>();
     static final String BASEURL = "https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910";
     static SQLITE sqlite = new SQLITE();
 
     public static void main(String[] args) {
         sqlite.connectToDB();
+        addDisciplines();
         addDepartments();
         removeCoursesBasedOnDepartmentDB("ALL");//clears table
-        updateDepartment("ALL");//scrapes all departments NOTE: Takes a long time to run
+        updateDepartment("ALL");//scrapes all departments or individual departments NOTE: Takes a long time to run
         //getCourses("ART", courseList); //tests individual departments
         //System.out.println(courseList.get(0));//prints out specified entry in courseList
         //printOUT();//prints first 100 entries ArrayList courseList out
@@ -34,7 +36,7 @@ public class Main {
                 int CRN = list.get(i).getCRN();
                 String URL = list.get(i).getURL();
                 String course = list.get(i).getCourse();
-                String discipline = list.get(i).getDiscipline();
+                String discipline = list.get(i).getDisciplineFull();
                 String department = list.get(i).getDepartment();
                 int sectionNumber = list.get(i).getSectionNumber();
                 String type = list.get(i).getType();
@@ -214,7 +216,6 @@ public class Main {
                         days, times, room, instructor, maxEnrollment, availableSeats, courseNote, courseFees,
                         feeTitles, perCourse, perCredit, startDate, endDate);
                 list.add(section);
-                System.out.println(section);//only for debugging
             }
         }
     }
@@ -236,11 +237,14 @@ public class Main {
     }
 
     public static void addDepartments() {
+        /*String getDepartments = "";
         try {
-
-        } catch (Exception e) {
-
-        }
+            Connection conn = sqlite.getConn();
+            Statement statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery(getDepartments);
+        } catch (SQLException e){
+            System.err.println(e.getMessage());
+        }*/
         departments.add("AF");
         departments.add("ART");
         departments.add("BIO");
@@ -263,5 +267,20 @@ public class Main {
         departments.add("PSY");
         departments.add("FINE");
         departments.add("CON");
+    }
+
+    public static void addDisciplines(){
+        String getDepartments = "SELECT SubAbbrev, SubFullName FROM subject";
+        try {
+            Connection conn = sqlite.getConn();
+            Statement statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery(getDepartments);
+            while (rs.next()){
+                Discipline discipline = new Discipline(rs.getString("SubAbbrev"), rs.getString("SubFullName"));
+                disciplines.add(discipline);
+            }
+        } catch (SQLException e){
+            System.err.println(e.getMessage());
+        }
     }
 }
