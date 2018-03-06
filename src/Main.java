@@ -39,20 +39,15 @@ public class Main {
     static Connection conn;
 
     public static void main(String[] args) throws SQLException, IOException {
-
+        InsertApp app = new InsertApp();
         showMenu();
-
-
-
-
-
 
     }
 
     private static void showMenu() throws IOException {
         String addr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
         ArrayList<DeptObject> departments = getDepartments(addr);
-        InsertApp app = new InsertApp();
+//        InsertApp app = new InsertApp();
 
 
 
@@ -100,7 +95,7 @@ public class Main {
             Scanner input = new Scanner(System.in);
 
             String s = input.next().toUpperCase().trim();
-            ch = (s.length()>0) ? s.charAt(0) : 'x';
+            ch = (s.length() > 0) ? s.charAt(0) : 'x';
             input.nextLine();
 //
 //            String addr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
@@ -114,43 +109,22 @@ public class Main {
             switch (ch) {
 
                 case 'A':
-//                    app.deleteSubjectFields();
-//                    System.out.println("Subject table erased and re-built");
-
-//                    if (subjects.isEmpty()){
-//                        subjects = getSubjects(addr);
-//
-//                        System.out.println("Subjects:");
-//                        for (int i = 1; i < subjects.size(); i++) {
-//                            SubjectObject so = subjects.get(i);
-//                            String abbrev = so.subjectAbbrev;
-//                            String full = so.subjFullName;
-//                            app.insertSubjectFields(abbrev,full);
-//                            System.out.println(full);
-//                        }
-//                    }
-
-                    System.exit(0);
-
+//Erase and Build the Subjects table
+                    deleteSubjectFields();
                     break;
                 case 'B':
-//                    ArrayList<DeptObject> departments = new ArrayList<>();
-//                    departments = getDepartments(addr);
-                    app.deleteDeptFields();
-
-                        System.out.println("Department table is cleared and the records are added back in");
-//                        System.out.println("Department table erased and re-built");
-                        System.exit(0);
-//                    }
-
+//Erase and Build the Department table
+//
+                    deleteDeptFields();
                     break;
                 case 'C':
 //                    Create report for Subjects
+                    printSubjectTaable();
 //                this.dodge();
                     break;
                 case 'D':
 //                    Create report for Departments
-                    createDeptReport(departments, addr, app);
+                    printDeptTable();
 
 //                this.exit();
                     break;
@@ -164,10 +138,9 @@ public class Main {
                     break;
             }
 
-        } while (ch!='Q');
+        } while (ch != 'Q');
 
     }
-
 
 
     /**
@@ -209,16 +182,7 @@ public class Main {
                 System.out.println(e.getMessage());
             }
         }
-        public void deleteSubjectFields() {
-            String sql = "DELETE from subject";
 
-            try (Connection conn = this.connect();
-                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                pstmt.executeUpdate();
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-        }
         /**
          * Insert a new row into the department table
          *
@@ -237,30 +201,66 @@ public class Main {
                 System.out.println(e.getMessage());
             }
         }
-        public void deleteDeptFields() {
-            String sql = "DELETE from department";
 
-            try (Connection conn = this.connect();
-                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                pstmt.executeUpdate();
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-        }
+
 
 
     }
+    public static void deleteSubjectFields() {
+        InsertApp app = new InsertApp();
+        String sql = "DELETE from subject";
+
+        try (Connection conn = app.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("Subject fields deleted.");
+    }
+
+    public static void deleteDeptFields() {
+        InsertApp app = new InsertApp();
+        String sql = "DELETE from department";
+
+        try (Connection conn = app.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("Department fields deleted.");
+    }
 
     //                        Print function for Departments
-    public static void createDeptReport(ArrayList<DeptObject> departments, String addr, InsertApp app) {
-        System.out.println("Here is the Dept Report:");
-        System.out.println("Departments: ");
+    public static void printSubjectTaable() throws IOException {
+        InsertApp app = new InsertApp();
+//        app.connect();
+        String adr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
+        ArrayList<SubjectObject> subjects = getSubjects(adr);
+        System.out.println("Here is the Subject Table:");
+        for (int i = 1; i < subjects.size(); i++) {
+            SubjectObject so = subjects.get(i);
+            String abbrev = so.subjectAbbrev;
+            String full = so.subjFullName;
+            app.insertSubjectFields(abbrev, full);
+            System.out.println(abbrev + " " + full);
+        }
+    }
+
+    public static void printDeptTable() throws IOException {
+        InsertApp app = new InsertApp();
+//        app.connect();
+        String adr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
+        ArrayList<DeptObject> departments = getDepartments(adr);
+        System.out.println("Here is the Dept Table:");
         for (int i = 1; i < departments.size(); i++) {
             DeptObject deptO = departments.get(i);
             String abbrev = deptO.deptAbbrev;
             String full = deptO.deptFullName;
-            app.insertSubjectFields(abbrev,full);
-            System.out.println(full);
+            app.insertSubjectFields(abbrev, full);
+            System.out.println(abbrev + " " + full);
         }
     }
 
@@ -310,7 +310,6 @@ public class Main {
         }
         return departments;
     }
-
 
 
 }
