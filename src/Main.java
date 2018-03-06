@@ -1,36 +1,12 @@
-//import com.mysql.jdbc.Connection;
-//import com.mysql.jdbc.Statement;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.*;
+import org.jsoup.Connection.*;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
-        /*
-        * The URL for the landing page is https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910
-        This should be a simple get page with no post data.
-        */
-
-            /*
-            *
-                I think I have deduced the required POST fields.  Here is what I have figured out.
-
-                course_number: This is only used when searching for a specific course.  Typical data would be something like "csc184"
-                but the field can be empty with just "" as the value.  In fact, it should be an empty string if you are searching by subject or department.
-
-                subject: If searching by department, use "ALL" in this field.  If searching for subject, use the list found on the landing page
-
-                dept: This is the department.  "CSMP" would be an example.  The list of departments can be discovered by looking at the html on the landing page.
-
-                display_closed: The value should be "YES"   Otherwise closed sections are not displayed
-
-                course_type:  Should normally be "ALL"  You could probably figure out other values by looking at the landing page.
-            * */
 
 public class Main {
     static ArrayList<Sections> courseList = new ArrayList<>();
@@ -40,12 +16,9 @@ public class Main {
     static final String BASEURL = "https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910";
     static SQLITE sqlite = new SQLITE();
 
-    static Connection conn;
-
     public static void main(String[] args) throws SQLException, IOException {
-        InsertApp app = new InsertApp();
-        showMenu();
         sqlite.connectToDB();
+        showMenu();
         addDisciplines();
         addDepartments();
         removeCoursesBasedOnDepartmentDB("ALL");//clears table
@@ -54,12 +27,6 @@ public class Main {
     }
 
     private static void showMenu() throws IOException {
-        String addr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
-        ArrayList<DeptObject> departments = getDepartments(addr);
-//        InsertApp app = new InsertApp();
-
-
-
         /*
         * Keep in mind that you are working with a database.  Presumably, someone has already populated the departments and disciplines.
         * If not, it will have to be done.  Items A and B are not about loading the tables into memory.
@@ -106,14 +73,6 @@ public class Main {
             String s = input.next().toUpperCase().trim();
             ch = (s.length() > 0) ? s.charAt(0) : 'x';
             input.nextLine();
-//
-//            String addr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
-//            ArrayList<SubjectObject> subjects = new ArrayList<>();
-//
-////            ArrayList<DeptObject> departments = new ArrayList<>();
-////            departments = getDepartments(addr);
-//
-
 
             switch (ch) {
 
@@ -137,6 +96,9 @@ public class Main {
 
 //                this.exit();
                     break;
+                case 'H':
+                    addDisciplines();
+                    updateDepartment("ART");break;
                 case 'Q':
 //                    Create report for Departments
 //                this.exit();
@@ -151,47 +113,21 @@ public class Main {
 
     }
 
+    public static void insertSubjectFields(String SubAbbrev, String SubFullName) {
+        String sql = "INSERT INTO subject(SubAbbrev,SubFullName) VALUES(?,?)";
 
-    /**
-     * @author sqlitetutorial.net
-     */
-    public static class InsertApp {
-        /**
-         * Connect to the test.db database
-         *
-         * @return the Connection object
-         */
-        private Connection connect() {
-            // SQLite connection string
-            String url = "jdbc:sqlite:midtermdb.db";
-            Connection conn = null;
-            try {
-                conn = DriverManager.getConnection(url);
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-            return conn;
+        try {
+            Connection conn = sqlite.conn;
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, SubAbbrev);
+            pstmt.setString(2, SubFullName);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
+    }
 
-        /**
-         * Insert a new row into the subject table
-         *
-         * @param SubAbbrev
-         * @param SubFullName
-         */
-        public void insertSubjectFields(String SubAbbrev, String SubFullName) {
-            String sql = "INSERT INTO subject(SubAbbrev,SubFullName) VALUES(?,?)";
-
-            try (Connection conn = this.connect();
-                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                pstmt.setString(1, SubAbbrev);
-                pstmt.setString(2, SubFullName);
-                pstmt.executeUpdate();
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-=======
-//landing page url="https://aps2.missouriwestern.edu/schedule/default.asp?tck=201910"
+    //landing page url="https://aps2.missouriwestern.edu/schedule/default.asp?tck=201910"
     public static void insertCourses(ArrayList<Sections> list) {
         try {
             for (int i = 0; i < list.size(); i++) {
@@ -233,7 +169,7 @@ public class Main {
                         "LOCATION," +
                         "INSTRUCTOR," +
                         "MAX_INROLLMENT," +
-                        "AVAILABLE_SEATS," +
+                        "SEATS_AVAILABLE," +
                         "COURSE_NOTE," +
                         "COURSE_FEES," +
                         "FEE_TITLES," +
@@ -276,13 +212,13 @@ public class Main {
         }
     }
 
-    public static void removeCoursesBasedOnDepartmentDB(String department){
+    public static void removeCoursesBasedOnDepartmentDB(String department) {
         try {
-            if (department.equalsIgnoreCase("ALL")){
+            if (department.equalsIgnoreCase("ALL")) {
                 String deleteSQL = "DELETE FROM COURSES";
                 PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
                 delete.executeUpdate();
-            }else {
+            } else {
                 String deleteSQL = "DELETE FROM COURSES WHERE DEPARTMENT = ?";
                 PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
                 delete.setString(1, department.toUpperCase());
@@ -313,35 +249,28 @@ public class Main {
         } finally {
             return doc;
         }
-        /**
-         * Insert a new row into the department table
-         *
-         * @param deptAbbrev
-         * @param deptFullName
-         */
-        public void insertDeptFields(String deptAbbrev, String deptFullName) {
-            String sql = "INSERT INTO department(DepAbbrev,DepFullName) VALUES(?,?)";
-
-            try (Connection conn = this.connect();
-                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                pstmt.setString(1, deptAbbrev);
-                pstmt.setString(2, deptFullName);
-                pstmt.executeUpdate();
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-
-
-
-
     }
+
+    public static void insertDeptFields(String deptAbbrev, String deptFullName) {
+        String sql = "INSERT INTO department(DepAbbrev,DepFullName) VALUES(?,?)";
+
+        try {
+            Connection conn = sqlite.conn;
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, deptAbbrev);
+            pstmt.setString(2, deptFullName);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public static void deleteSubjectFields() {
-        InsertApp app = new InsertApp();
         String sql = "DELETE from subject";
 
-        try (Connection conn = app.connect();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try {
+            Connection conn = sqlite.getConn();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -350,10 +279,9 @@ public class Main {
     }
 
     public static void deleteDeptFields() {
-        InsertApp app = new InsertApp();
         String sql = "DELETE from department";
 
-        try (Connection conn = app.connect();
+        try (Connection conn = sqlite.conn;
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -363,10 +291,8 @@ public class Main {
         System.out.println("Department fields deleted.");
     }
 
-    //                        Print function for Departments
+    //Print function for Departments
     public static void printSubjectTaable() throws IOException {
-        InsertApp app = new InsertApp();
-//        app.connect();
         String adr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
         ArrayList<SubjectObject> subjects = getSubjects(adr);
         System.out.println("Here is the Subject Table:");
@@ -374,14 +300,12 @@ public class Main {
             SubjectObject so = subjects.get(i);
             String abbrev = so.subjectAbbrev;
             String full = so.subjFullName;
-            app.insertSubjectFields(abbrev, full);
+            insertSubjectFields(abbrev, full);
             System.out.println(abbrev + " " + full);
         }
     }
 
     public static void printDeptTable() throws IOException {
-        InsertApp app = new InsertApp();
-//        app.connect();
         String adr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
         ArrayList<DeptObject> departments = getDepartments(adr);
         System.out.println("Here is the Dept Table:");
@@ -389,7 +313,7 @@ public class Main {
             DeptObject deptO = departments.get(i);
             String abbrev = deptO.deptAbbrev;
             String full = deptO.deptFullName;
-            app.insertSubjectFields(abbrev, full);
+            insertDeptFields(abbrev, full);
             System.out.println(abbrev + " " + full);
         }
     }
@@ -473,7 +397,7 @@ public class Main {
             String className = rowGeneral.attr("class");
             Elements tdGeneral = rowGeneral.select("td");
             if (className.equals("list_row")) {
-                if (tdGeneral.size()==10) {
+                if (tdGeneral.size() == 10) {
                     CRN = Integer.parseInt(tdGeneral.get(0).text().trim());
                     URL = "https://aps2.missouriwestern.edu/schedule/" + tdGeneral.select("a").first().attr("href");
                     course = tdGeneral.get(1).text().trim();
@@ -485,43 +409,44 @@ public class Main {
                     times = tdGeneral.get(7).text().trim();
                     room = tdGeneral.get(8).text();
                     instructor = tdGeneral.get(9).text();
-                }
-                else{
+                } else {
                     days = days + "\n" + tdGeneral.get(1).text().trim();
                     times = times + "\n" + tdGeneral.get(2).text().trim();
                     room = room + "\n" + tdGeneral.get(3).text();
                 }
             }
-            if (className.equals("detail_row")){
-                int startIndexOfMaxSeats = tdGeneral.select("span.course_seats").text().indexOf(":")+2;
-                int endIndexOfMaxSeats = tdGeneral.select("span.course_seats").text().indexOf("Section Seats Available:")-1;
-                int startIndexOfAvailableSeats = tdGeneral.select("span.course_seats").text().lastIndexOf(":")+2;
+            if (className.equals("detail_row")) {
+                int startIndexOfMaxSeats = tdGeneral.select("span.course_seats").text().indexOf(":") + 2;
+                int endIndexOfMaxSeats = tdGeneral.select("span.course_seats").text().indexOf("Section Seats Available:") - 1;
+                int startIndexOfAvailableSeats = tdGeneral.select("span.course_seats").text().lastIndexOf(":") + 2;
                 maxEnrollment = Integer.parseInt(tdGeneral.select("span.course_seats").text().substring(startIndexOfMaxSeats, endIndexOfMaxSeats));
                 availableSeats = Integer.parseInt(tdGeneral.select("span.course_seats").text().substring(startIndexOfAvailableSeats));
 
                 Elements fees = tdGeneral.select("span.course_fees");
-                for (int i=0; i<fees.size(); i++){
+                for (int i = 0; i < fees.size(); i++) {
                     int indexOfColon = fees.get(i).text().indexOf(':');
-                    int indexOfFee = fees.get(i).text().indexOf("Fee")+4;
+                    int indexOfFee = fees.get(i).text().indexOf("Fee") + 4;
                     int indexOfFlat = fees.get(i).text().indexOf("FLAT");
                     int indexOfCred = fees.get(i).text().indexOf("CRED");
                     if (fees.get(i).text().contains("Flat Fee")) {
                         perCourse = "Yes";
-                        if (feeTitles.length()==0){
-                            feeTitles = fees.get(i).text().substring(indexOfColon+2, indexOfFlat+4);
-                        }else {
-                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon+2, indexOfFlat+4);//.substring(fee.text().indexOf(": ") + 1, fee.text().indexOf("&nbsp"));
+                        if (feeTitles.length() == 0) {
+                            feeTitles = fees.get(i).text().substring(indexOfColon + 2, indexOfFlat + 4);
+                        } else {
+                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon + 2, indexOfFlat + 4);//.substring(fee.text().indexOf(": ") + 1, fee.text().indexOf("&nbsp"));
                         }
-                        courseFees = courseFees + Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfFlat-1));
-                    }if (fees.get(i).text().contains("per Credit Hour fee")){
+                        courseFees = courseFees + Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfFlat - 1));
+                    }
+                    if (fees.get(i).text().contains("per Credit Hour fee")) {
                         perCredit = "Yes";
-                        if (feeTitles.length()==0){
-                            feeTitles = fees.get(i).text().substring(indexOfColon+2, indexOfCred+4);
-                        }else {
-                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon+2, indexOfCred+4);//.substring(fee.text().indexOf(": "), fee.text().indexOf("&nbsp"));
+                        if (feeTitles.length() == 0) {
+                            feeTitles = fees.get(i).text().substring(indexOfColon + 2, indexOfCred + 4);
+                        } else {
+                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon + 2, indexOfCred + 4);//.substring(fee.text().indexOf(": "), fee.text().indexOf("&nbsp"));
                         }
-                        courseFees = courseFees + (credits * (Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfCred-1))));
-                    } if (!(fees.get(i).text().contains("Flat Fee")) && !(fees.get(i).text().contains("per Credit Hour fee"))){
+                        courseFees = courseFees + (credits * (Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfCred - 1))));
+                    }
+                    if (!(fees.get(i).text().contains("Flat Fee")) && !(fees.get(i).text().contains("per Credit Hour fee"))) {
                         perCourse = "No";
                         perCredit = "No";
                         feeTitles = "None";
@@ -532,7 +457,7 @@ public class Main {
                 startDate = tdGeneral.select("span.course_begins").text().trim();
                 endDate = tdGeneral.select("span.course_ends").text().trim();
             }
-            if (!(CRN==0)) {
+            if (!(CRN == 0)) {
                 Sections section = new Sections(department, CRN, URL, course, sectionNumber, type, title, credits,
                         days, times, room, instructor, maxEnrollment, availableSeats, courseNote, courseFees,
                         feeTitles, perCourse, perCredit, courseTerm, startDate, endDate);
@@ -544,10 +469,10 @@ public class Main {
     }
 
     public static void updateDepartment(String department) {
-        if (department.equalsIgnoreCase("ALL")){
+        if (department.equalsIgnoreCase("ALL")) {
             Sections.removeALL();
             removeCoursesBasedOnDepartmentDB(department);
-            for (String dpt: departments){
+            for (String dpt : departments) {
                 getCourses(dpt, tempArrayList);
             }
         } else {
@@ -596,17 +521,17 @@ public class Main {
         departments.add("CON");
     }
 
-    public static void addDisciplines(){
+    public static void addDisciplines() {
         String getDisciplines = "SELECT SubAbbrev, SubFullName FROM subject";
         try {
-            Connection conn = sqlite.getConn();
+            Connection conn = sqlite.conn;
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery(getDisciplines);
-            while (rs.next()){
+            while (rs.next()) {
                 Discipline discipline = new Discipline(rs.getString("SubAbbrev"), rs.getString("SubFullName"));
                 disciplines.add(discipline);
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
     }

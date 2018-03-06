@@ -4,15 +4,18 @@ import java.sql.SQLException;
 
 public class SQLITE {
     Connection conn;
-    String DBFileName = "midtermdb.db";
+    final String DBFileName = "midtermdb.db";
 
     public void connectToDB() {
         String DBPath = "jdbc:sqlite:" + DBFileName;
         conn = null;
         try {
             conn = DriverManager.getConnection(DBPath);
+            System.out.println("connected");
         } catch (SQLException e) {
             System.err.println(e.getMessage());
+            System.out.println("not connected");
+            System.exit(1);
         }
     }
 
