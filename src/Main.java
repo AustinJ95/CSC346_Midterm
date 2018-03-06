@@ -210,20 +210,26 @@ public class Main {
 
                 Elements fees = tdGeneral.select("span.course_fees");
                 for (int i=0; i<fees.size(); i++){
+                    int indexOfColon = fees.get(i).text().indexOf(':');
+                    int indexOfFee = fees.get(i).text().indexOf("Fee")+4;
+                    int indexOfFlat = fees.get(i).text().indexOf("FLAT");
+                    int indexOfCred = fees.get(i).text().indexOf("CRED");
                     if (fees.get(i).text().contains("Flat Fee")) {
                         perCourse = "Yes";
                         if (feeTitles.length()==0){
-                            feeTitles = fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("FLAT"));
+                            feeTitles = fees.get(i).text().substring(indexOfColon+2, indexOfFlat+4);
                         }else {
-                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("FLAT"));//.substring(fee.text().indexOf(": ") + 1, fee.text().indexOf("&nbsp"));
+                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon+2, indexOfFlat+4);//.substring(fee.text().indexOf(": ") + 1, fee.text().indexOf("&nbsp"));
                         }
+                        courseFees = courseFees + Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfFlat-1));
                     }if (fees.get(i).text().contains("per Credit Hour fee")){
                         perCredit = "Yes";
                         if (feeTitles.length()==0){
-                            feeTitles = fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("CRED"));
+                            feeTitles = fees.get(i).text().substring(indexOfColon+2, indexOfCred+4);
                         }else {
-                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("CRED"));//.substring(fee.text().indexOf(": "), fee.text().indexOf("&nbsp"));
+                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon+2, indexOfCred+4);//.substring(fee.text().indexOf(": "), fee.text().indexOf("&nbsp"));
                         }
+                        courseFees = courseFees + (credits * (Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfCred-1))));
                     } if (!(fees.get(i).text().contains("Flat Fee")) && !(fees.get(i).text().contains("per Credit Hour fee"))){
                         perCourse = "No";
                         perCredit = "No";
