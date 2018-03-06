@@ -1,5 +1,6 @@
 //import com.mysql.jdbc.Connection;
 //import com.mysql.jdbc.Statement;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -7,6 +8,7 @@ import org.jsoup.nodes.Element;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
         /*
@@ -35,76 +37,232 @@ public class Main {
 
 
     static Connection conn;
-    static ResultSet rs;
-    static Statement stmt;
 
     public static void main(String[] args) throws SQLException, IOException {
+
+        showMenu();
+
+
+
+
+
+
+    }
+
+    private static void showMenu() throws IOException {
         String addr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
-
-        ArrayList<SubjectObject> subjects = getSubjects(addr);
-
-
-//        System.out.println("The first :" + subjects.get(0).toString());
-
-//        System.out.println("The first :" + String.valueOf(subjects.get(0)));
-
-
-        getSubjects("https://aps2.missouriwestern.edu/schedule/?tck=201830");
-
+        ArrayList<DeptObject> departments = getDepartments(addr);
         InsertApp app = new InsertApp();
 
-        for (int i = 0; i < subjects.size(); i++) {
-//            System.out.println("An object :" +subjects.get(i));
-            SubjectObject so = subjects.get(i);
-            String abbrev = so.subjectAbbrev;
-            String full = so.subjFullName;
-            app.insert(abbrev,full);
+
+
+        /*
+        * Keep in mind that you are working with a database.  Presumably, someone has already populated the departments and disciplines.
+        * If not, it will have to be done.  Items A and B are not about loading the tables into memory.
+        * They are about rebuilding the tables in the database.
+
+            You should not be writing the full logic to do the table building in the case statement.
+            The case statements for A and B should call methods that rebuild the database tables.
+            This doesn't just give you cleaner code, it is actually important for program operation.
+            For example, if someone selects option E and the department and discipline tables are empty,
+            then a user selecting E will effectively also be calling A and B.
+
+            I don't mean doing a create statement.  It is fine to do that in the GUI.
+            I meant clearing the records and then adding them back in.
+            Building the tables should only need to happen if there is a change in departments or disciplines.
+            Items A and B would only need to be done maybe once a semester, or if you suspected that a department or discipline had changed.
+            For example, if two departments had been combined or a department changed its name, then the department table would need to updated.
+
+
+        * */
+//        Please remember to implement this in a method.
+// the case 'E': code should be little more than a call to the method followed by a break.
+// Also, if the method used for E finds another table empty it would need to call the methods to build the tables before it can produce the report.
+        char ch;
+        do {
+            System.out.println("-- Actions --");
+            System.out.println(
+                    "Select an option: \n" +
+                            "  A) Erase and Build Subjects table\n" +
+                            "  B) Erase and build the Department table\n" +
+                            "  C) Print Subjects table\n" +
+                            "  D) Print Departments table\n" +
+                            "  E) Print the report of disciplines by Department\n" +
+                            "  G) Erase and build sections data (Will be prompted for the department)\n" +
+                            "  H) Print a simple listing of all sections by department or by discipline (Will be prompted)\n" +
+                            "  I) Print faculty and faculty schedules  by department\n" +
+                            "  J) Print control-break section report for a department  (Will be prompted for the department)\n" +
+                            "  K) Produce the control-break output\n" +
+                            "  L) A statement about how much Person B hates the web developer that designed the sections layout\n" +
+                            "  Q) Quit\n "
+            );
+
+            Scanner input = new Scanner(System.in);
+
+            String s = input.next().toUpperCase().trim();
+            ch = (s.length()>0) ? s.charAt(0) : 'x';
+            input.nextLine();
+//
+//            String addr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
+//            ArrayList<SubjectObject> subjects = new ArrayList<>();
+//
+////            ArrayList<DeptObject> departments = new ArrayList<>();
+////            departments = getDepartments(addr);
+//
+
+
+            switch (ch) {
+
+                case 'A':
+//                    app.deleteSubjectFields();
+//                    System.out.println("Subject table erased and re-built");
+
+//                    if (subjects.isEmpty()){
+//                        subjects = getSubjects(addr);
+//
+//                        System.out.println("Subjects:");
+//                        for (int i = 1; i < subjects.size(); i++) {
+//                            SubjectObject so = subjects.get(i);
+//                            String abbrev = so.subjectAbbrev;
+//                            String full = so.subjFullName;
+//                            app.insertSubjectFields(abbrev,full);
+//                            System.out.println(full);
+//                        }
+//                    }
+
+                    System.exit(0);
+
+                    break;
+                case 'B':
+//                    ArrayList<DeptObject> departments = new ArrayList<>();
+//                    departments = getDepartments(addr);
+                    app.deleteDeptFields();
+
+                        System.out.println("Department table is cleared and the records are added back in");
+//                        System.out.println("Department table erased and re-built");
+                        System.exit(0);
+//                    }
+
+                    break;
+                case 'C':
+//                    Create report for Subjects
+//                this.dodge();
+                    break;
+                case 'D':
+//                    Create report for Departments
+                    createDeptReport(departments, addr, app);
+
+//                this.exit();
+                    break;
+                case 'Q':
+//                    Create report for Departments
+//                this.exit();
+                    break;
+
+                default:
+                    System.out.println("Type a letter from the menu!");
+                    break;
+            }
+
+        } while (ch!='Q');
+
+    }
+
+
+
+    /**
+     * @author sqlitetutorial.net
+     */
+    public static class InsertApp {
+        /**
+         * Connect to the test.db database
+         *
+         * @return the Connection object
+         */
+        private Connection connect() {
+            // SQLite connection string
+            String url = "jdbc:sqlite:midtermdb.db";
+            Connection conn = null;
+            try {
+                conn = DriverManager.getConnection(url);
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+            return conn;
+        }
+
+        /**
+         * Insert a new row into the subject table
+         *
+         * @param SubAbbrev
+         * @param SubFullName
+         */
+        public void insertSubjectFields(String SubAbbrev, String SubFullName) {
+            String sql = "INSERT INTO subject(SubAbbrev,SubFullName) VALUES(?,?)";
+
+            try (Connection conn = this.connect();
+                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setString(1, SubAbbrev);
+                pstmt.setString(2, SubFullName);
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        public void deleteSubjectFields() {
+            String sql = "DELETE from subject";
+
+            try (Connection conn = this.connect();
+                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        /**
+         * Insert a new row into the department table
+         *
+         * @param deptAbbrev
+         * @param deptFullName
+         */
+        public void insertDeptFields(String deptAbbrev, String deptFullName) {
+            String sql = "INSERT INTO department(DepAbbrev,DepFullName) VALUES(?,?)";
+
+            try (Connection conn = this.connect();
+                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setString(1, deptAbbrev);
+                pstmt.setString(2, deptFullName);
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        public void deleteDeptFields() {
+            String sql = "DELETE from department";
+
+            try (Connection conn = this.connect();
+                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+
+    }
+
+    //                        Print function for Departments
+    public static void createDeptReport(ArrayList<DeptObject> departments, String addr, InsertApp app) {
+        System.out.println("Here is the Dept Report:");
+        System.out.println("Departments: ");
+        for (int i = 1; i < departments.size(); i++) {
+            DeptObject deptO = departments.get(i);
+            String abbrev = deptO.deptAbbrev;
+            String full = deptO.deptFullName;
+            app.insertSubjectFields(abbrev,full);
+            System.out.println(full);
         }
     }
-        /**
-         *
-         * @author sqlitetutorial.net
-         */
-        public static class InsertApp {
-
-            /**
-             * Connect to the test.db database
-             *
-             * @return the Connection object
-             */
-            private Connection connect() {
-                // SQLite connection string
-                String url = "jdbc:sqlite:midtermdb.db";
-                Connection conn = null;
-                try {
-                    conn = DriverManager.getConnection(url);
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-                return conn;
-            }
-
-            /**
-             * Insert a new row into the subject table
-             *
-             * @param SubAbbrev
-             * @param SubFullName
-             */
-            public void insert(String SubAbbrev, String SubFullName) {
-                String sql = "INSERT INTO subject(SubAbbrev,SubFullName) VALUES(?,?)";
-
-                try (Connection conn = this.connect();
-                     PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                    pstmt.setString(1, SubAbbrev);
-                    pstmt.setString(2, SubFullName);
-                    pstmt.executeUpdate();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
-        }
-
-
 
     public static ArrayList<SubjectObject> getSubjects(String addr) throws IOException {
         ArrayList<SubjectObject> subjects = new ArrayList<>();
@@ -117,7 +275,6 @@ public class Main {
                 if (subjectFull == null) break;
                 String subjectAbbrev = subjectFull.attr("value");
 
-//                System.out.println("In getSubjects: "+ subjectAbbrev + " " + subjectFull.text());
                 SubjectObject newSubjectObject = new SubjectObject(subjectAbbrev, subjectFull.text());
                 subjects.add(newSubjectObject);
                 //Add size.text() to your list
@@ -141,7 +298,7 @@ public class Main {
                 if (deptFull == null) break;
                 String deptAbbrev = deptFull.attr("value");
 
-                System.out.println(deptAbbrev + " " + deptFull.text());
+//                System.out.println(deptAbbrev + " " + deptFull.text());
                 DeptObject newSubjectObject = new DeptObject(deptAbbrev, deptFull.text());
                 departments.add(newSubjectObject);
                 //Add size.text() to your list
@@ -153,20 +310,8 @@ public class Main {
         }
         return departments;
     }
-    public static void insertDB(ArrayList<SubjectObject> d) throws SQLException {
-        String insert = " insert into Subject (SubAbbrev, SubFullName)" + " values (?, ?)";
 
-//        String insert = "insert into Subject values(?,?)";
-        PreparedStatement ps = conn.prepareStatement(insert);
-        for (SubjectObject object : d) {
-            ps.setString(1, object.subjectAbbrev); // resource
-            ps.setString(2, object.subjFullName); // activity
-            ps.addBatch();
-        }
-//        ps.executeBatch();
-//        ps.execute();
-        System.out.println("Helloe");
-    }
+
 
 }
 
