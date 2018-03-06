@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/lib/jsoup-1.11.2.jar!/" />
+          <root url="jar://$USER_HOME$/Documents/AD/5. Professions and Applied Sciences/Education/MWSU/07MWSUSpring2018/CSC346/homework/3/jsoup-1.11.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
