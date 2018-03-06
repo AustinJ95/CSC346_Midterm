@@ -20,7 +20,7 @@ public class Sections{
     int maxEnrollment;
     int availableSeats;
     String courseNote;
-    String courseFees;
+    double courseFees;
     String feeTitles;
     String perCourse;
     String perCredit;
@@ -30,7 +30,7 @@ public class Sections{
 
     public Sections(String department, int CRN, String courseURL, String course, int secNumber, String type,
                     String title, int credits, String days, String hours, String room, String instructor,
-                    int maxEnrollment, int availableSeats, String courseNote, String courseFees, String feeTitles,
+                    int maxEnrollment, int availableSeats, String courseNote, double courseFees, String feeTitles,
                     String perCourse, String perCredit, String courseTerm, String startDate, String endDate){
 
         setDepartment(department);
@@ -139,11 +139,11 @@ public class Sections{
         this.courseNote = courseNote;
     }
 
-    public String getCourseFees() {
+    public double getCourseFees() {
         return courseFees;
     }
 
-    public void setCourseFees(String courseFees) {
+    public void setCourseFees(double courseFees) {
         this.courseFees = courseFees;
     }
 

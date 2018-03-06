@@ -23,10 +23,7 @@ public class Main {
         addDisciplines();
         addDepartments();
         removeCoursesBasedOnDepartmentDB("ALL");//clears table
-        updateDepartment("ART");//scrapes all departments or individual departments NOTE: Takes a long time to run
-        //getCourses("ART", courseList); //tests individual departments
-        //System.out.println(courseList.get(0));//prints out specified entry in courseList
-        //printOUT();//prints first 100 entries ArrayList courseList out
+        updateDepartment("ART");//scrapes all departments or individual departments NOTE: Takes a long time to run if using "ALL"
         sqlite.closeDB();
     }
 
@@ -49,7 +46,7 @@ public class Main {
                 int maxEnrollment = list.get(i).getMaxEnrollment();
                 int availableSeats = list.get(i).getAvailableSeats();
                 String courseNote = list.get(i).getCourseNote();
-                String courseFees = list.get(i).getCourseFees();
+                double courseFees = list.get(i).getCourseFees();
                 String feeTitles = list.get(i).getFeeTitles();
                 String perCourse = list.get(i).getPerCourse();
                 String perCredit = list.get(i).getPerCredit();
@@ -99,7 +96,7 @@ public class Main {
                 add.setInt(13, maxEnrollment);
                 add.setInt(14, availableSeats);
                 add.setString(15, courseNote);
-                add.setString(16, courseFees);
+                add.setDouble(16, courseFees);
                 add.setString(17, feeTitles);
                 add.setString(18, perCourse);
                 add.setString(19, perCredit);
@@ -116,24 +113,18 @@ public class Main {
 
     public static void removeCoursesBasedOnDepartmentDB(String department){
         try {
-            if (department.equals("ALL")){
+            if (department.equalsIgnoreCase("ALL")){
                 String deleteSQL = "DELETE FROM COURSES";
                 PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
                 delete.executeUpdate();
             }else {
                 String deleteSQL = "DELETE FROM COURSES WHERE DEPARTMENT = ?";
                 PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
-                delete.setString(1, department);
+                delete.setString(1, department.toUpperCase());
                 delete.executeUpdate();
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-    }
-
-    public static void printOUT() {
-        for (int i = 0; i < 100; i++) {
-            System.out.println(courseList.get(i));
         }
     }
 
@@ -146,7 +137,7 @@ public class Main {
                     .method(Method.POST)
                     .data("course_number", "")
                     .data("subject", "ALL")
-                    .data("department", department)
+                    .data("department", department.toUpperCase())
                     .data("display_closed", "YES")
                     .data("course_type", "ALL")
                     .followRedirects(true)
@@ -174,7 +165,7 @@ public class Main {
         int maxEnrollment = 0;
         int availableSeats = 0;
         String courseNote = "";
-        String courseFees = "";
+        double courseFees = 0;
         String feeTitles = "";
         String perCourse = "";
         String perCredit = "";
@@ -185,8 +176,6 @@ public class Main {
         Document doc = getPost(department);
         Elements resultTable = doc.select("div#maincontent > table.results");
         Elements courseGeneral = resultTable.select("tr");
-        Elements courseSpecific = resultTable.select("tr.detail_row");
-        Elements courseGeneralException = resultTable.select("tr.list_row + tr.list_row");
 
         System.out.printf("Scraping based on Department:%s\n", department);
         for (Element rowGeneral : courseGeneral) {
@@ -213,6 +202,35 @@ public class Main {
                 }
             }
             if (className.equals("detail_row")){
+                int startIndexOfMaxSeats = tdGeneral.select("span.course_seats").text().indexOf(":")+2;
+                int endIndexOfMaxSeats = tdGeneral.select("span.course_seats").text().indexOf("Section Seats Available:")-1;
+                int startIndexOfAvailableSeats = tdGeneral.select("span.course_seats").text().lastIndexOf(":")+2;
+                maxEnrollment = Integer.parseInt(tdGeneral.select("span.course_seats").text().substring(startIndexOfMaxSeats, endIndexOfMaxSeats));
+                availableSeats = Integer.parseInt(tdGeneral.select("span.course_seats").text().substring(startIndexOfAvailableSeats));
+
+                Elements fees = tdGeneral.select("span.course_fees");
+                for (int i=0; i<fees.size(); i++){
+                    if (fees.get(i).text().contains("Flat Fee")) {
+                        perCourse = "Yes";
+                        if (feeTitles.length()==0){
+                            feeTitles = fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("FLAT"));
+                        }else {
+                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("FLAT"));//.substring(fee.text().indexOf(": ") + 1, fee.text().indexOf("&nbsp"));
+                        }
+                    }if (fees.get(i).text().contains("per Credit Hour fee")){
+                        perCredit = "Yes";
+                        if (feeTitles.length()==0){
+                            feeTitles = fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("CRED"));
+                        }else {
+                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(fees.get(i).text().indexOf(':')+2, fees.get(i).text().indexOf("CRED"));//.substring(fee.text().indexOf(": "), fee.text().indexOf("&nbsp"));
+                        }
+                    } if (!(fees.get(i).text().contains("Flat Fee")) && !(fees.get(i).text().contains("per Credit Hour fee"))){
+                        perCourse = "No";
+                        perCredit = "No";
+                        feeTitles = "None";
+                    }
+                }
+
                 courseTerm = tdGeneral.select("span.course_term").text();
                 startDate = tdGeneral.select("span.course_begins").text().trim();
                 endDate = tdGeneral.select("span.course_ends").text().trim();
@@ -222,12 +240,14 @@ public class Main {
                         days, times, room, instructor, maxEnrollment, availableSeats, courseNote, courseFees,
                         feeTitles, perCourse, perCredit, courseTerm, startDate, endDate);
                 list.add(section);
+                feeTitles = "";
+                courseFees = 0.0;
             }
         }
     }
 
     public static void updateDepartment(String department) {
-        if (department.equals("ALL")){
+        if (department.equalsIgnoreCase("ALL")){
             Sections.removeALL();
             removeCoursesBasedOnDepartmentDB(department);
             for (String dpt: departments){
