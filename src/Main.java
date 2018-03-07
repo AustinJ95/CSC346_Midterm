@@ -9,8 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static ArrayList<Sections> courseList = new ArrayList<>();
-    static ArrayList<String> departments = new ArrayList<>();
+    static ArrayList<Department> departments = new ArrayList<>();
     static ArrayList<Discipline> disciplines = new ArrayList<>();
     static ArrayList<Sections> tempArrayList = new ArrayList<>();
     static final String BASEURL = "https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910";
@@ -77,31 +76,30 @@ public class Main {
             switch (ch) {
 
                 case 'A':
-//Erase and Build the Subjects table
+                    //Erase and Build the Subjects table
                     deleteSubjectFields();
+                    printSubjectTable();
                     break;
                 case 'B':
-//Erase and Build the Department table
-//
+                    //Erase and Build the Department table
                     deleteDeptFields();
+                    printDeptTable();
                     break;
                 case 'C':
-//                    Create report for Subjects
-                    printSubjectTaable();
-//                this.dodge();
+                    //Create report for Subjects
+                    printSubjectTable();
                     break;
                 case 'D':
-//                    Create report for Departments
+                    //Create report for Departments
                     printDeptTable();
-
-//                this.exit();
                     break;
                 case 'H':
-                    addDisciplines();
-                    updateDepartment("ART");break;
+                    //addDepartments();
+                    //addDisciplines();
+                    //updateDepartment("ART");break;
                 case 'Q':
-//                    Create report for Departments
-//                this.exit();
+                    //Create report for Departments
+                    //this.exit();
                     break;
 
                 default:
@@ -292,7 +290,7 @@ public class Main {
     }
 
     //Print function for Departments
-    public static void printSubjectTaable() throws IOException {
+    public static void printSubjectTable() throws IOException {
         String adr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
         ArrayList<SubjectObject> subjects = getSubjects(adr);
         System.out.println("Here is the Subject Table:");
@@ -472,8 +470,8 @@ public class Main {
         if (department.equalsIgnoreCase("ALL")) {
             Sections.removeALL();
             removeCoursesBasedOnDepartmentDB(department);
-            for (String dpt : departments) {
-                getCourses(dpt, tempArrayList);
+            for (Department dpt : departments) {
+                getCourses(dpt.getDepartmentAbbrev(), tempArrayList);
             }
         } else {
             Sections.removeBasedOnDepartmentList(department);
@@ -485,19 +483,19 @@ public class Main {
     }
 
     public static void addDepartments() {
-        /*        String getDepartments = "SELECT SubAbbrev, SubFullName FROM subject";
+        String getDepartments = "SELECT DepAbbrev, DepFullName FROM department";
         try {
-            Connection conn = sqlite.getConn();
+            Connection conn = sqlite.conn;
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery(getDepartments);
             while (rs.next()){
-                Discipline discipline = new Discipline(rs.getString("SubAbbrev"), rs.getString("SubFullName"));
-                disciplines.add(discipline);
+                Department department = new Department(rs.getString("DepAbbrev"), rs.getString("DepFullName"));
+                departments.add(department);
             }
         } catch (SQLException e){
             System.err.println(e.getMessage());
-        }*/
-        departments.add("AF");
+        }
+        /*departments.add("AF");
         departments.add("ART");
         departments.add("BIO");
         departments.add("BUS");
@@ -518,7 +516,7 @@ public class Main {
         departments.add("NUR");
         departments.add("PSY");
         departments.add("FINE");
-        departments.add("CON");
+        departments.add("CON");*/
     }
 
     public static void addDisciplines() {
