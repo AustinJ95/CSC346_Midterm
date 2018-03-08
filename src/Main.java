@@ -15,7 +15,7 @@ public class Main {
     static final String BASEURL = "https://aps2.missouriwestern.edu/schedule/Default.asp?tck=201910";
     static SQLITE sqlite = new SQLITE();
 
-    public static void main(String[] args) throws SQLException, IOException {
+    public static void main(String[] args) throws IOException {
         sqlite.connectToDB();
         isDataBaseEmpty();
         showMenu();
@@ -94,7 +94,7 @@ public class Main {
                 case 'F':eraseAndBuildCoursesData(input);break;
                 case 'G':printSections(input);break;
                 case 'H':printByInstructor(input);break;
-                case 'I':break;
+                case 'I':controlBreakByDepartment(input);break;
                 case 'J':break;
                 case 'K':
                     System.out.println("The person who coded the sections pages was not very good.");break;
@@ -114,6 +114,69 @@ public class Main {
         addDepartments();
         addDisciplines();
         updateCourses(department);
+    }
+
+    public static void controlBreakByDepartment(Scanner input){
+        System.out.println("Enter a department.");
+        String userInput = input.next().trim().toUpperCase();
+        String query = "SELECT * FROM COURSES WHERE DEPARTMENT='" + userInput + "' GROUP BY COURSE";
+        try {
+            String nextDiscipline = "";
+            Statement statement = sqlite.conn.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()) {
+                if (!rs.next()) {
+                    rs.next();
+                    nextDiscipline = rs.getString("DISCIPLINE");
+                    rs.previous();
+                }
+                int CRN = rs.getInt(1);
+                String course = rs.getString(2);
+                String title = rs.getString(3);
+                String discipline = rs.getString(4);
+                String department = rs.getString(5);
+                int section = rs.getInt(6);
+                String type = rs.getString(7);
+                int credits = rs.getInt(8);
+                String days = rs.getString(9);
+                String times = rs.getString(10);
+                String location = rs.getString(11);
+                String instructor = rs.getString(12);
+                int maxSeats = rs.getInt(13);
+                int availableSeats = rs.getInt(14);
+                String courseNote = rs.getString(15);
+                double courseFees = rs.getDouble(16);
+                String feeTitles = rs.getString(17);
+                String perCourse = rs.getString(18);
+                String perCredit = rs.getString(19);
+                String term = rs.getString(20);
+                String startDate = rs.getString(21);
+                String endDate = rs.getString(22);
+                String URL = rs.getString(23);
+
+                if (discipline.equalsIgnoreCase(nextDiscipline)) {
+                    String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
+                                    "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
+                                    "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
+                                    "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)",
+                            CRN, course, title, discipline, department, section, type, credits, days, times, location, instructor,
+                            maxSeats, availableSeats, courseNote, courseFees, feeTitles, perCourse, perCredit, term, startDate, endDate, URL);
+                    System.out.println(output);
+                } else {
+                    String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
+                                    "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
+                                    "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
+                                    "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)\n",
+                            CRN, course, title, discipline, department, section, type, credits, days, times, location, instructor,
+                            maxSeats, availableSeats, courseNote, courseFees, feeTitles, perCourse, perCredit, term, startDate, endDate, URL);
+                    System.out.println(output);
+                }
+            }
+        }catch(SQLException e){
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
 
     public static void printByInstructor(Scanner input){
@@ -191,7 +254,7 @@ public class Main {
                 String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
                                 "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
                                 "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
-                                "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)\n",
+                                "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)",
                         CRN, course, title, discipline, department, section, type, credits, days, times, location, instructor,
                         maxSeats, availableSeats, courseNote, courseFees, feeTitles, perCourse, perCredit, term, startDate, endDate, URL);
                 System.out.println(output);
