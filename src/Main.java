@@ -103,15 +103,15 @@ public class Main {
                     printByInstructor(input);
                     break;
                 case 'I':
-                    controlBreakByDepartment(input);
+                    controlBreakByDepartment(input, 0);
                     break;
                 case 'J':
+                    controlBreakByDepartment(input, 1);
                     break;
                 case 'K':
                     System.out.println("The person who coded the sections pages was not very good.");
                     break;
-                case 'Q':
-                    break;
+                case 'Q':break;
                 default:
                     System.out.println("Type a letter from the menu!");
                     break;
@@ -129,10 +129,15 @@ public class Main {
         updateCourses(department);
     }
 
-    public static void controlBreakByDepartment(Scanner input) {
-        System.out.println("Enter a department.");
-        String userInput = input.next().trim().toUpperCase();
-        String query = "SELECT * FROM COURSES WHERE DEPARTMENT='" + userInput + "' GROUP BY COURSE";
+    public static void controlBreakByDepartment(Scanner input, int index) {
+        String query = "";
+        if (index == 0){
+            System.out.println("Enter a department.");
+            String userInput = input.next().trim().toUpperCase();
+            query = "SELECT * FROM COURSES WHERE DEPARTMENT='" + userInput + "' ORDER BY DEPARTMENT";
+        } else if (index == 1){
+            query = "SELECT * FROM COURSES ORDER BY DEPARTMENT";
+        }
         try {
             Statement statement = sqlite.conn.createStatement();
             ResultSet rs = statement.executeQuery(query);
