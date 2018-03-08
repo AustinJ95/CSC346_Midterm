@@ -3,6 +3,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.*;
 import org.jsoup.Connection.*;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -90,15 +91,27 @@ public class Main {
                     //Create report for Departments
                     printDeptTable();
                     break;
-                case 'E':break;
-                case 'F':eraseAndBuildCoursesData(input);break;
-                case 'G':printSections(input);break;
-                case 'H':printByInstructor(input);break;
-                case 'I':controlBreakByDepartment(input);break;
-                case 'J':break;
+                case 'E':
+                    break;
+                case 'F':
+                    eraseAndBuildCoursesData(input);
+                    break;
+                case 'G':
+                    printSections(input);
+                    break;
+                case 'H':
+                    printByInstructor(input);
+                    break;
+                case 'I':
+                    controlBreakByDepartment(input);
+                    break;
+                case 'J':
+                    break;
                 case 'K':
-                    System.out.println("The person who coded the sections pages was not very good.");break;
-                case 'Q':break;
+                    System.out.println("The person who coded the sections pages was not very good.");
+                    break;
+                case 'Q':
+                    break;
                 default:
                     System.out.println("Type a letter from the menu!");
                     break;
@@ -107,7 +120,7 @@ public class Main {
         } while (ch != 'Q');
     }
 
-    public static void eraseAndBuildCoursesData(Scanner input){
+    public static void eraseAndBuildCoursesData(Scanner input) {
         String department;
         System.out.println("Enter a department code to have that department updated in the database, or enter \"ALL\" to update all departments.");
         department = input.next().trim().toUpperCase();
@@ -116,24 +129,18 @@ public class Main {
         updateCourses(department);
     }
 
-    public static void controlBreakByDepartment(Scanner input){
+    public static void controlBreakByDepartment(Scanner input) {
         System.out.println("Enter a department.");
         String userInput = input.next().trim().toUpperCase();
         String query = "SELECT * FROM COURSES WHERE DEPARTMENT='" + userInput + "' GROUP BY COURSE";
         try {
-            String nextDiscipline = "";
             Statement statement = sqlite.conn.createStatement();
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
-                if (!rs.next()) {
-                    rs.next();
-                    nextDiscipline = rs.getString("DISCIPLINE");
-                    rs.previous();
-                }
                 int CRN = rs.getInt(1);
                 String course = rs.getString(2);
                 String title = rs.getString(3);
-                String discipline = rs.getString(4);
+                //String discipline = rs.getString(4);
                 String department = rs.getString(5);
                 int section = rs.getInt(6);
                 String type = rs.getString(7);
@@ -154,41 +161,30 @@ public class Main {
                 String endDate = rs.getString(22);
                 String URL = rs.getString(23);
 
-                if (discipline.equalsIgnoreCase(nextDiscipline)) {
-                    String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
-                                    "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
-                                    "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
-                                    "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)",
-                            CRN, course, title, discipline, department, section, type, credits, days, times, location, instructor,
-                            maxSeats, availableSeats, courseNote, courseFees, feeTitles, perCourse, perCredit, term, startDate, endDate, URL);
-                    System.out.println(output);
-                } else {
-                    String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
-                                    "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
-                                    "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
-                                    "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)\n",
-                            CRN, course, title, discipline, department, section, type, credits, days, times, location, instructor,
-                            maxSeats, availableSeats, courseNote, courseFees, feeTitles, perCourse, perCredit, term, startDate, endDate, URL);
-                    System.out.println(output);
-                }
+                Sections newCourse = new Sections(department, CRN, URL, course, section, type, title, credits,
+                        days, times, location, instructor, maxSeats, availableSeats, courseNote, courseFees,
+                        feeTitles, perCourse, perCredit, term, startDate, endDate);
+                tempArrayList.add(newCourse);
             }
-        }catch(SQLException e){
+            Sections.printBreak();
+            Sections.removeALL();
+        } catch (SQLException e) {
             System.err.println(e.getMessage());
             e.printStackTrace();
             System.exit(1);
         }
     }
 
-    public static void printByInstructor(Scanner input){
+    public static void printByInstructor(Scanner input) {
         System.out.println("Enter a department to see instructors.");
         String userInput = input.next().trim().toUpperCase();
-        try{
+        try {
             String query = "SELECT INSTRUCTOR, DEPARTMENT, COURSE, CRN, DAYS, TIMES, LOCATION FROM COURSES " +
-                    "WHERE DEPARTMENT = '"+userInput+"' GROUP BY INSTRUCTOR ORDER BY DEPARTMENT";
+                    "WHERE DEPARTMENT = '" + userInput + "' GROUP BY INSTRUCTOR ORDER BY DEPARTMENT";
             Statement statement = sqlite.conn.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             System.out.println("Running query.");
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 String instructor = resultSet.getString(1);
                 String department = resultSet.getString(2);
                 String course = resultSet.getString(3);
@@ -200,27 +196,27 @@ public class Main {
                         "TIMES:(%s)   LOCATIONS:(%s)\n", department, instructor, course, crn, days, times, location);
                 System.out.println(output);
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public static void printSections(Scanner input) {
-        System.out.println("Enter a discipline or department to have all sections printed that match.");
+        System.out.println("Enter \"discipline\" or \"department\" to then search a specific discipline or department.");
         String userInput = input.next().trim();
         try {
             Statement statement = sqlite.conn.createStatement();
             ResultSet resultSet;
             String query;
-            if (userInput.equalsIgnoreCase("discipline")){
+            if (userInput.equalsIgnoreCase("discipline")) {
                 System.out.println("Enter a discipline.");
                 String userDiscipline = input.next().trim().toUpperCase();
-                query = "SELECT * FROM COURSES WHERE DISCIPLINE='"+userDiscipline+"' ORDER BY DEPARTMENT";
-            }else if (userInput.equalsIgnoreCase("department")){
+                query = "SELECT * FROM COURSES WHERE DISCIPLINE='" + userDiscipline + "' ORDER BY DEPARTMENT";
+            } else if (userInput.equalsIgnoreCase("department")) {
                 System.out.println("Enter a department.");
                 String userDepartment = input.next().trim().toUpperCase();
-                query = "SELECT * FROM COURSES WHERE DEPARTMENT='"+userDepartment+"' ORDER BY DEPARTMENT";
-            }else{
+                query = "SELECT * FROM COURSES WHERE DEPARTMENT='" + userDepartment + "' ORDER BY DEPARTMENT";
+            } else {
                 System.out.println("No matches found");
                 return;
             }
@@ -264,21 +260,21 @@ public class Main {
         }
     }
 
-    public static void isDataBaseEmpty() throws IOException{
+    public static void isDataBaseEmpty() throws IOException {
         try {
             Statement statement = sqlite.conn.createStatement();
             ResultSet COURSES = statement.executeQuery("SELECT * FROM COURSES");
             ResultSet department = statement.executeQuery("SELECT * FROM department");
             ResultSet subject = statement.executeQuery("SELECT * FROM subject");
-            if (!department.next()){
+            if (!department.next()) {
                 System.out.println("department table is empty. Populating department table.");
                 printDeptTable();
             }
-            if (!subject.next()){
+            if (!subject.next()) {
                 System.out.println("subject table is empty. Populating subject table.");
                 printSubjectTable();
             }
-            if (!COURSES.next()){
+            if (!COURSES.next()) {
                 System.out.println("COURSES table is empty. Populating COURSES table, could take awhile to load.");
                 addDepartments();
                 addDisciplines();
@@ -565,7 +561,7 @@ public class Main {
 
         System.out.printf("Scraping based on Department:%s\n", department);
         for (Element rowGeneral : courseGeneral) {
-            if (rowGeneral.select("td").text().equalsIgnoreCase("No courses found")){
+            if (rowGeneral.select("td").text().equalsIgnoreCase("No courses found")) {
                 return;
             }
             String className = rowGeneral.attr("class");
@@ -575,7 +571,7 @@ public class Main {
                     CRN = Integer.parseInt(tdGeneral.get(0).text().trim());
                     URL = "https://aps2.missouriwestern.edu/schedule/" + tdGeneral.select("a").first().attr("href");
                     course = tdGeneral.get(1).text().trim();
-                    if (course.contains("</td>")){
+                    if (course.contains("</td>")) {
                         course = course.replace("</td>", "");
                     }
                     sectionNumber = Integer.parseInt(tdGeneral.get(2).text().trim());
@@ -611,7 +607,7 @@ public class Main {
                         } else {
                             feeTitles = feeTitles + ", " + fees.get(i).text().substring(indexOfColon + 2, indexOfFlat + 4);
                         }
-                        courseFees = courseFees + Double.parseDouble(fees.get(i).text().substring(indexOfFlat-7, indexOfFlat - 1).trim());
+                        courseFees = courseFees + Double.parseDouble(fees.get(i).text().substring(indexOfFlat - 7, indexOfFlat - 1).trim());
                     }
                     if (fees.get(i).text().contains("CRED")) {
                         perCredit = "Yes";
@@ -620,7 +616,7 @@ public class Main {
                         } else {
                             feeTitles = feeTitles + ", " + fees.get(i).text().substring(indexOfColon + 2, indexOfCred + 4);
                         }
-                        courseFees = courseFees + (credits * (Double.parseDouble(fees.get(i).text().substring(indexOfCred-7, indexOfCred - 1).trim())));
+                        courseFees = courseFees + (credits * (Double.parseDouble(fees.get(i).text().substring(indexOfCred - 7, indexOfCred - 1).trim())));
                     }
                     if (!(fees.get(i).text().contains("Flat Fee")) && !(fees.get(i).text().contains("per Credit Hour fee"))) {
                         perCourse = "No";
@@ -630,16 +626,19 @@ public class Main {
                     }
                 }
 
-                courseTerm = tdGeneral.select("span.course_term").text();
-                startDate = tdGeneral.select("span.course_begins").text().trim();
-                endDate = tdGeneral.select("span.course_ends").text().trim();
+                courseTerm = tdGeneral.select("span.course_term").text().trim();
+
+                int indexOfColonStartDate = tdGeneral.select("span.course_begins").text().indexOf(":")+2;
+                int indexOfColonEndDate = tdGeneral.select("span.course_ends").text().indexOf(":")+2;
+                startDate = tdGeneral.select("span.course_begins").text().substring(indexOfColonStartDate).trim();
+                endDate = tdGeneral.select("span.course_ends").text().substring(indexOfColonEndDate).trim();
 
                 courseNote = tdGeneral.select("td.detail_cell").text()
                         .replace(tdGeneral.select("span.course_enrollment").text(), "").trim()
                         .replace(tdGeneral.select("span.course_fees").text(), "").trim()
                         .replace(tdGeneral.select("span.course_term").text(), "").trim()
                         .replace(tdGeneral.select("span.course_dates").text(), "").trim();
-                if (courseNote.length()==0){
+                if (courseNote.length() == 0) {
                     courseNote = "None";
                 }
                 courseFees = Math.round(courseFees * 100.00) / 100.00;
@@ -677,11 +676,11 @@ public class Main {
             Connection conn = sqlite.conn;
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery(getDepartments);
-            while (rs.next()){
+            while (rs.next()) {
                 Department department = new Department(rs.getString("DepAbbrev"), rs.getString("DepFullName"));
                 departments.add(department);
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
     }

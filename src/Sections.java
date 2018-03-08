@@ -6,9 +6,7 @@ public class Sections{
     String URL;
     String course;
     String discipline;
-    String disciplineFull;
     String department;
-    String departmentFull;
     int sectionNumber;
     String type;
     String title;
@@ -28,7 +26,7 @@ public class Sections{
     String startDate;
     String endDate;
 
-    public Sections(String department, int CRN, String courseURL, String course, int secNumber, String type,
+    public Sections(String department, int CRN, String courseURL, String course,int secNumber, String type,
                     String title, int credits, String days, String hours, String room, String instructor,
                     int maxEnrollment, int availableSeats, String courseNote, double courseFees, String feeTitles,
                     String perCourse, String perCredit, String courseTerm, String startDate, String endDate){
@@ -38,7 +36,6 @@ public class Sections{
         setCourseURL(courseURL);
         setCourse(course);
         setDiscipline();
-        setDisciplineFull();
         setSecNumber(secNumber);
         setType(type);
         setTitle(title);
@@ -57,26 +54,6 @@ public class Sections{
         setCourseTerm(courseTerm);
         setStartDate(startDate);
         setEndDate(endDate);
-    }
-
-    public String getDisciplineFull() {
-        return disciplineFull;
-    }
-
-    public void setDisciplineFull() {
-        int i=0;
-        while (!(getDiscipline().equals(Main.disciplines.get(i).getDisciplineAbbrev())) && i<Main.disciplines.size()-1){
-            i++;
-        }
-        disciplineFull = Main.disciplines.get(i).getDisciplineFull();
-    }
-
-    public String getDepartmentFull() {
-        return departmentFull;
-    }
-
-    public void setDepartmentFull(String departmentFull) {
-
     }
 
     public void setDiscipline(){
@@ -184,10 +161,7 @@ public class Sections{
     }
 
     public void setStartDate(String startDate) {
-        if (!(startDate.length()==0)) {
-            this.startDate = startDate.substring(14);
-        } else
-            this.startDate = startDate;
+        this.startDate = startDate;
     }
 
     public String getEndDate() {
@@ -195,10 +169,7 @@ public class Sections{
     }
 
     public void setEndDate(String endDate) {
-        if (!(endDate.length()==0)) {
-            this.endDate = endDate.substring(12);
-        } else
-            this.endDate = endDate;
+        this.endDate = endDate;
     }
 
     public String getDepartment() {
@@ -313,6 +284,40 @@ public class Sections{
     public static void removeALL(){
         for (int i=0; i<Main.tempArrayList.size(); i++){
             Main.tempArrayList.remove(i);
+        }
+    }
+
+    public static void printBreak() {
+        for (int i=0; i<Main.tempArrayList.size(); i++) {
+            String nextDiscipline = "";
+            if (i<Main.tempArrayList.size()-1) {
+                nextDiscipline = Main.tempArrayList.get(i+1).getDiscipline();
+            }
+            if (Main.tempArrayList.get(i).getDiscipline().equalsIgnoreCase(nextDiscipline)) {
+                String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
+                                "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
+                                "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
+                                "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)",
+                        Main.tempArrayList.get(i).CRN, Main.tempArrayList.get(i).course, Main.tempArrayList.get(i).title, Main.tempArrayList.get(i).discipline,
+                        Main.tempArrayList.get(i).department, Main.tempArrayList.get(i).sectionNumber, Main.tempArrayList.get(i).type, Main.tempArrayList.get(i).credits,
+                        Main.tempArrayList.get(i).days, Main.tempArrayList.get(i).times, Main.tempArrayList.get(i).room, Main.tempArrayList.get(i).instructor,
+                        Main.tempArrayList.get(i).maxEnrollment, Main.tempArrayList.get(i).availableSeats, Main.tempArrayList.get(i).courseNote, Main.tempArrayList.get(i).courseFees,
+                        Main.tempArrayList.get(i).feeTitles, Main.tempArrayList.get(i).perCourse, Main.tempArrayList.get(i).perCredit, Main.tempArrayList.get(i).courseTerm,
+                        Main.tempArrayList.get(i).startDate, Main.tempArrayList.get(i).endDate, Main.tempArrayList.get(i).URL);
+                System.out.println(output);
+            } else {
+                String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
+                                "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
+                                "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
+                                "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)\n",
+                        Main.tempArrayList.get(i).CRN, Main.tempArrayList.get(i).course, Main.tempArrayList.get(i).title, Main.tempArrayList.get(i).discipline,
+                        Main.tempArrayList.get(i).department, Main.tempArrayList.get(i).sectionNumber, Main.tempArrayList.get(i).type, Main.tempArrayList.get(i).credits,
+                        Main.tempArrayList.get(i).days, Main.tempArrayList.get(i).times, Main.tempArrayList.get(i).room, Main.tempArrayList.get(i).instructor,
+                        Main.tempArrayList.get(i).maxEnrollment, Main.tempArrayList.get(i).availableSeats, Main.tempArrayList.get(i).courseNote, Main.tempArrayList.get(i).courseFees,
+                        Main.tempArrayList.get(i).feeTitles, Main.tempArrayList.get(i).perCourse, Main.tempArrayList.get(i).perCredit, Main.tempArrayList.get(i).courseTerm,
+                        Main.tempArrayList.get(i).startDate, Main.tempArrayList.get(i).endDate, Main.tempArrayList.get(i).URL);
+                System.out.println(output);
+            }
         }
     }
 }

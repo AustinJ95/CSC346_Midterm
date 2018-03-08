@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b085d8c-fe34-4462-97a7-b9876e9f78fb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/midtermdb.db" afterPath="$PROJECT_DIR$/midtermdb.db" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/DeptObject.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/DeptObject.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Main.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Sections.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Sections.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/SubjectObject.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/SubjectObject.class" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/Sections.java" afterPath="$PROJECT_DIR$/src/Sections.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,53 +52,63 @@
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
         <item name="COURSES: table" type="ffe0bd85:SqliteImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="midtermdb.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="department: table" type="ffe0bd85:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="midtermdb.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="subject: table" type="ffe0bd85:SqliteImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="162" column="121" lean-forward="false" selection-start-line="162" selection-start-column="121" selection-end-line="162" selection-end-column="121" />
+            <state relative-caret-position="-855">
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-                <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-                <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-                <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-                <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-                <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-                <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-                <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-                <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-                <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-                <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-                <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-                <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-                <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-                <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+                <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+                <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+                <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+                <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+                <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+                <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+                <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+                <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+                <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+                <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+                <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+                <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+                <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+                <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+                <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="COURSES" pinned="false" current-in-tab="false">
-        <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sections.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sections.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1452">
-              <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="256">
+              <caret line="294" column="13" lean-forward="true" selection-start-line="294" selection-start-column="13" selection-end-line="294" selection-end-column="13" />
+              <folding>
+                <element signature="e#3850#3851#0" expanded="true" />
+                <element signature="e#3892#3893#0" expanded="true" />
+                <element signature="e#4002#4003#0" expanded="true" />
+                <element signature="e#4040#4041#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,8 +136,8 @@
       <file leaf-file-name="SQLITE.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SQLITE.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,10 +184,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
         <option value="src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES" />
         <option value="src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES_TEST" />
-        <option value="$PROJECT_DIR$/src/Sections.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
         <option value="$PROJECT_DIR$/src/SQLITE.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+        <option value="$PROJECT_DIR$/src/Sections.java" />
       </list>
     </option>
   </component>
@@ -361,7 +378,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27331000" />
+    <option name="totallyTimeSpent" value="31791000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -373,24 +390,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295562" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.340935" sideWeight="0.5042965" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34040296" sideWeight="0.49570355" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.340935" sideWeight="0.49570355" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33523375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1433942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1670247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -420,7 +438,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2873807" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361612" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1433942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -471,7 +488,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -490,21 +507,21 @@
           <caret line="95" column="22" lean-forward="false" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -515,21 +532,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -538,7 +555,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1518">
           <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#3850#3851#0" expanded="true" />
+            <element signature="e#3892#3893#0" expanded="true" />
+            <element signature="e#4002#4003#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -588,21 +610,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -613,21 +635,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -638,47 +660,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -690,21 +686,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -716,21 +712,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -742,21 +738,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -768,21 +764,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -794,21 +790,47 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -819,21 +841,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -845,21 +867,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -871,21 +893,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -896,21 +918,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
@@ -937,28 +959,33 @@
     </entry>
     <entry file="das://src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES" />
     <entry file="das://src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES_TEST" />
-    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java" />
-    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject" />
-    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department" />
+    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sampleResult.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="59" lean-forward="true" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SQLITE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -967,34 +994,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/detail_rowExample.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
+        <state relative-caret-position="1050">
           <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject" />
+    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department" />
+    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES">
+    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1003,25 +1020,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="162" column="121" lean-forward="false" selection-start-line="162" selection-start-column="121" selection-end-line="162" selection-end-column="121" />
+        <state relative-caret-position="-855">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1520521373638" expanded="true" signature="5863:5937" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="9719:9897" ph="SELECT INSTR... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11455:11534" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="11761:11840" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14537:14558" ph="SELECT * FRO... COURSES" />
-            <marker date="1520521373638" expanded="true" signature="14621:14645" ph="SELECT * FRO... department" />
-            <marker date="1520521373638" expanded="true" signature="14705:14726" ph="SELECT * FRO... subject" />
-            <marker date="1520521373638" expanded="true" signature="15544:15598" ph="INSERT INTO subject... " />
-            <marker date="1520521373638" expanded="true" signature="19929:19948" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="20132:20172" ph="DELETE FROM COURSES... " />
-            <marker date="1520521373638" expanded="true" signature="21356:21413" ph="INSERT INTO department... " />
-            <marker date="1520521373638" expanded="true" signature="21834:21853" ph="DELETE from subject... " />
-            <marker date="1520521373638" expanded="true" signature="22236:22258" ph="DELETE from department... " />
-            <marker date="1520521373638" expanded="true" signature="32381:32426" ph="SELECT DepAb... department" />
-            <marker date="1520521373638" expanded="true" signature="32987:33029" ph="SELECT SubAb... subject" />
+            <marker date="1520526329623" expanded="true" signature="6118:6192" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="8337:8519" ph="SELECT INSTR... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10097:10180" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="10409:10492" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13192:13213" ph="SELECT * FRO... COURSES" />
+            <marker date="1520526329623" expanded="true" signature="13276:13300" ph="SELECT * FRO... department" />
+            <marker date="1520526329623" expanded="true" signature="13360:13381" ph="SELECT * FRO... subject" />
+            <marker date="1520526329623" expanded="true" signature="14202:14256" ph="INSERT INTO subject... " />
+            <marker date="1520526329623" expanded="true" signature="18587:18606" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="18790:18830" ph="DELETE FROM COURSES... " />
+            <marker date="1520526329623" expanded="true" signature="20014:20071" ph="INSERT INTO department... " />
+            <marker date="1520526329623" expanded="true" signature="20492:20511" ph="DELETE from subject... " />
+            <marker date="1520526329623" expanded="true" signature="20894:20916" ph="DELETE from department... " />
+            <marker date="1520526329623" expanded="true" signature="31328:31373" ph="SELECT DepAb... department" />
+            <marker date="1520526329623" expanded="true" signature="31936:31978" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="294" column="13" lean-forward="true" selection-start-line="294" selection-start-column="13" selection-end-line="294" selection-end-column="13" />
+          <folding>
+            <element signature="e#3850#3851#0" expanded="true" />
+            <element signature="e#3892#3893#0" expanded="true" />
+            <element signature="e#4002#4003#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
           </folding>
         </state>
       </provider>
