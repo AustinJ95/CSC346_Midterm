@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b085d8c-fe34-4462-97a7-b9876e9f78fb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/detail_rowExample.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/midtermdb.db" afterPath="$PROJECT_DIR$/midtermdb.db" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/DeptObject.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/DeptObject.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Main.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Sections.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Sections.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/SubjectObject.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/SubjectObject.class" />
+      <change beforePath="$PROJECT_DIR$/sampleResult.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/SQLITE.java" afterPath="$PROJECT_DIR$/src/SQLITE.java" />
       <change beforePath="$PROJECT_DIR$/src/Sections.java" afterPath="$PROJECT_DIR$/src/Sections.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,14 +53,7 @@
         <item name="midtermdb.db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="department: table" type="ffe0bd85:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="midtermdb.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="subject: table" type="ffe0bd85:SqliteImplModel$Table" />
+        <item name="COURSES: table" type="ffe0bd85:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -62,34 +63,30 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="98" column="22" lean-forward="false" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+            <state relative-caret-position="254">
+              <caret line="57" column="106" lean-forward="false" selection-start-line="57" selection-start-column="106" selection-end-line="57" selection-end-column="106" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-                <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-                <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-                <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-                <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-                <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-                <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-                <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
+                <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+                <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+                <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+                <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+                <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+                <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+                <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+                <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+                <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+                <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+                <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+                <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+                <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+                <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subject" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="department" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department">
+      <file leaf-file-name="COURSES" pinned="false" current-in-tab="false">
+        <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -100,28 +97,8 @@
       <file leaf-file-name="Sections.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sampleResult.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sampleResult.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail_rowExample.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detail_rowExample.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="1408">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -150,11 +127,9 @@
       <file leaf-file-name="SQLITE.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SQLITE.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,6 +147,7 @@
       <find>deleteSubjectFields</find>
       <find>close</find>
       <find>closed</find>
+      <find>//</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,11 +166,11 @@
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4d72ea8b-c509-464e-b7c3-ab54fa8d5a44/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-        <option value="$PROJECT_DIR$/src/SQLITE.java" />
         <option value="src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES" />
         <option value="src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES_TEST" />
         <option value="$PROJECT_DIR$/src/Sections.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+        <option value="$PROJECT_DIR$/src/SQLITE.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -212,7 +188,7 @@
     <option name="height" value="1177" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -225,23 +201,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CSC346_Midterm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSC346_Midterm" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
@@ -382,6 +342,7 @@
       <updated>1520374175200</updated>
       <workItem from="1520374181880" duration="303000" />
       <workItem from="1520374518557" duration="6887000" />
+      <workItem from="1520477844731" duration="18083000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Merge disaster">
       <created>1520379838968</created>
@@ -401,7 +362,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7190000" />
+    <option name="totallyTimeSpent" value="25273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -413,25 +374,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295562" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.340935" sideWeight="0.5042965" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2873807" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.340935" sideWeight="0.49570355" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2873807" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.336374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361612" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1433942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1670247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -490,7 +452,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -500,251 +462,44 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Sections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sampleResult.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/detail_rowExample.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1d9f5b35-7f85-4c41-9e4a-cbc6415f17c0/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4d72ea8b-c509-464e-b7c3-ab54fa8d5a44/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/ArrayList.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="924">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -765,69 +520,347 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES_TEST">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SQLITE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="198">
           <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sections.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1d9f5b35-7f85-4c41-9e4a-cbc6415f17c0/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4d72ea8b-c509-464e-b7c3-ab54fa8d5a44/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e8b43bb7-6ba0-493e-b880-675bc0470746/console.sql" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/ArrayList.java" />
+    <entry file="file://$PROJECT_DIR$/src/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Discipline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES" />
+    <entry file="das://src:table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES_TEST" />
+    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java" />
+    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject" />
+    <entry file="das://table:/cb2661e8/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department" />
     <entry file="file://$PROJECT_DIR$/sampleResult.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -836,28 +869,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/917a3ef2-7df6-43b6-b537-2bc105a30e34/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="59" lean-forward="true" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SQLITE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/detail_rowExample.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="726">
+          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.subject">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.department">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b85c7a39/917a3ef2-7df6-43b6-b537-2bc105a30e34/main.COURSES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="98" column="22" lean-forward="false" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+        <state relative-caret-position="254">
+          <caret line="57" column="106" lean-forward="false" selection-start-line="57" selection-start-column="106" selection-end-line="57" selection-end-column="106" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1520381478109" expanded="true" signature="5443:5497" ph="INSERT INTO subject... " />
-            <marker date="1520381478109" expanded="true" signature="9927:9946" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="10135:10175" ph="DELETE FROM COURSES... " />
-            <marker date="1520381478109" expanded="true" signature="11364:11421" ph="INSERT INTO department... " />
-            <marker date="1520381478109" expanded="true" signature="11842:11861" ph="DELETE from subject... " />
-            <marker date="1520381478109" expanded="true" signature="12249:12271" ph="DELETE from department... " />
-            <marker date="1520381478109" expanded="true" signature="21976:22021" ph="SELECT DepAb... department" />
-            <marker date="1520381478109" expanded="true" signature="23293:23335" ph="SELECT SubAb... subject" />
+            <marker date="1520495664477" expanded="true" signature="5874:6052" ph="SELECT INSTR... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7610:7689" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="7916:7995" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10694:10715" ph="SELECT * FRO... COURSES" />
+            <marker date="1520495664477" expanded="true" signature="10778:10802" ph="SELECT * FRO... department" />
+            <marker date="1520495664477" expanded="true" signature="10862:10883" ph="SELECT * FRO... subject" />
+            <marker date="1520495664477" expanded="true" signature="11701:11755" ph="INSERT INTO subject... " />
+            <marker date="1520495664477" expanded="true" signature="16086:16105" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="16289:16329" ph="DELETE FROM COURSES... " />
+            <marker date="1520495664477" expanded="true" signature="17513:17570" ph="INSERT INTO department... " />
+            <marker date="1520495664477" expanded="true" signature="17991:18010" ph="DELETE from subject... " />
+            <marker date="1520495664477" expanded="true" signature="18393:18415" ph="DELETE from department... " />
+            <marker date="1520495664477" expanded="true" signature="28538:28583" ph="SELECT DepAb... department" />
+            <marker date="1520495664477" expanded="true" signature="29144:29186" ph="SELECT SubAb... subject" />
           </folding>
         </state>
       </provider>

@@ -17,11 +17,8 @@ public class Main {
 
     public static void main(String[] args) throws SQLException, IOException {
         sqlite.connectToDB();
+        isDataBaseEmpty();
         showMenu();
-        addDisciplines();
-        addDepartments();
-        removeCoursesBasedOnDepartmentDB("ALL");//clears table
-        updateDepartment("ART");//scrapes all departments or individual departments NOTE: Takes a long time to run if using "ALL"
         sqlite.closeDB();
     }
 
@@ -58,12 +55,12 @@ public class Main {
                             "  C) Print Subjects table\n" +
                             "  D) Print Departments table\n" +
                             "  E) Print the report of disciplines by Department\n" +
-                            "  G) Erase and build sections data (Will be prompted for the department)\n" +
-                            "  H) Print a simple listing of all sections by department or by discipline (Will be prompted)\n" +
-                            "  I) Print faculty and faculty schedules  by department\n" +
-                            "  J) Print control-break section report for a department  (Will be prompted for the department)\n" +
-                            "  K) Produce the control-break output\n" +
-                            "  L) A statement about how much Person B hates the web developer that designed the sections layout\n" +
+                            "  F) Erase and build sections data (Will be prompted for the department)\n" +
+                            "  G) Print a simple listing of all sections by department or by discipline (Will be prompted)\n" +
+                            "  H) Print faculty and faculty schedules  by department\n" +
+                            "  I) Print control-break section report for a department  (Will be prompted for the department)\n" +
+                            "  J) Produce the control-break output\n" +
+                            "  K) A statement about how much Person B hates the web developer that designed the sections layout\n" +
                             "  Q) Quit\n "
             );
 
@@ -93,22 +90,140 @@ public class Main {
                     //Create report for Departments
                     printDeptTable();
                     break;
-                case 'H':
-                    //addDepartments();
-                    //addDisciplines();
-                    //updateDepartment("ART");break;
-                case 'Q':
-                    //Create report for Departments
-                    //this.exit();
-                    break;
-
+                case 'E':break;
+                case 'F':eraseAndBuildCoursesData(input);break;
+                case 'G':printSections(input);break;
+                case 'H':printByInstructor(input);break;
+                case 'I':break;
+                case 'J':break;
+                case 'K':
+                    System.out.println("The person who coded the sections pages was not very good.");break;
+                case 'Q':break;
                 default:
                     System.out.println("Type a letter from the menu!");
                     break;
             }
 
         } while (ch != 'Q');
+    }
 
+    public static void eraseAndBuildCoursesData(Scanner input){
+        String department;
+        System.out.println("Enter a department code to have that department updated in the database, or enter \"ALL\" to update all departments.");
+        department = input.next().trim().toUpperCase();
+        addDepartments();
+        addDisciplines();
+        updateCourses(department);
+    }
+
+    public static void printByInstructor(Scanner input){
+        System.out.println("Enter a department to see instructors.");
+        String userInput = input.next().trim().toUpperCase();
+        try{
+            String query = "SELECT INSTRUCTOR, DEPARTMENT, COURSE, CRN, DAYS, TIMES, LOCATION FROM COURSES " +
+                    "WHERE DEPARTMENT = '"+userInput+"' GROUP BY INSTRUCTOR ORDER BY DEPARTMENT";
+            Statement statement = sqlite.conn.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            System.out.println("Running query.");
+            while (resultSet.next()){
+                String instructor = resultSet.getString(1);
+                String department = resultSet.getString(2);
+                String course = resultSet.getString(3);
+                int crn = resultSet.getInt(4);
+                String days = resultSet.getString(5);
+                String times = resultSet.getString(6);
+                String location = resultSet.getString(7);
+                String output = String.format("DEPARTMENT:(%s)   INSTRUCTOR:(%s)   COURSE:(%s)   CRN:(%d)   DAYS:(%s)   " +
+                        "TIMES:(%s)   LOCATIONS:(%s)\n", department, instructor, course, crn, days, times, location);
+                System.out.println(output);
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void printSections(Scanner input) {
+        System.out.println("Enter a discipline or department to have all sections printed that match.");
+        String userInput = input.next().trim();
+        try {
+            Statement statement = sqlite.conn.createStatement();
+            ResultSet resultSet;
+            String query;
+            if (userInput.equalsIgnoreCase("discipline")){
+                System.out.println("Enter a discipline.");
+                String userDiscipline = input.next().trim().toUpperCase();
+                query = "SELECT * FROM COURSES WHERE DISCIPLINE='"+userDiscipline+"' ORDER BY DEPARTMENT";
+            }else if (userInput.equalsIgnoreCase("department")){
+                System.out.println("Enter a department.");
+                String userDepartment = input.next().trim().toUpperCase();
+                query = "SELECT * FROM COURSES WHERE DEPARTMENT='"+userDepartment+"' ORDER BY DEPARTMENT";
+            }else{
+                System.out.println("No matches found");
+                return;
+            }
+            resultSet = statement.executeQuery(query);
+            System.out.println("Running query.");
+            while (resultSet.next()) {
+                int CRN = resultSet.getInt(1);
+                String course = resultSet.getString(2);
+                String title = resultSet.getString(3);
+                String discipline = resultSet.getString(4);
+                String department = resultSet.getString(5);
+                int section = resultSet.getInt(6);
+                String type = resultSet.getString(7);
+                int credits = resultSet.getInt(8);
+                String days = resultSet.getString(9);
+                String times = resultSet.getString(10);
+                String location = resultSet.getString(11);
+                String instructor = resultSet.getString(12);
+                int maxSeats = resultSet.getInt(13);
+                int availableSeats = resultSet.getInt(14);
+                String courseNote = resultSet.getString(15);
+                double courseFees = resultSet.getDouble(16);
+                String feeTitles = resultSet.getString(17);
+                String perCourse = resultSet.getString(18);
+                String perCredit = resultSet.getString(19);
+                String term = resultSet.getString(20);
+                String startDate = resultSet.getString(21);
+                String endDate = resultSet.getString(22);
+                String URL = resultSet.getString(23);
+
+                String output = String.format("CRN:(%d)   COURSE:(%s)   TITLE:(%s)   DISCIPLINE:(%s)   DEPARTMENT:(%s)   SECTION:(%d)   TYPE:(%s)   " +
+                                "CREDITS:(%d)   DAYS:(%s)   TIMES:(%s)   LOCATION:(%s)   INSTRUCTOR:(%s)   MAX SEATS:(%d)   " +
+                                "AVAILABLE SEATS:(%d)   COURSE NOTES:(%s)   COURSE FEES:(%1.2f)   FEE TITLES:(%s)   PER COURSE:(%S)   " +
+                                "PER CREDIT:(%s)   TERM:(%s)   START DATE:(%s)   END DATE:(%s)   URL:(%s)\n",
+                        CRN, course, title, discipline, department, section, type, credits, days, times, location, instructor,
+                        maxSeats, availableSeats, courseNote, courseFees, feeTitles, perCourse, perCredit, term, startDate, endDate, URL);
+                System.out.println(output);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void isDataBaseEmpty() throws IOException{
+        try {
+            Statement statement = sqlite.conn.createStatement();
+            ResultSet COURSES = statement.executeQuery("SELECT * FROM COURSES");
+            ResultSet department = statement.executeQuery("SELECT * FROM department");
+            ResultSet subject = statement.executeQuery("SELECT * FROM subject");
+            if (!department.next()){
+                System.out.println("department table is empty. Populating department table.");
+                printDeptTable();
+            }
+            if (!subject.next()){
+                System.out.println("subject table is empty. Populating subject table.");
+                printSubjectTable();
+            }
+            if (!COURSES.next()){
+                System.out.println("COURSES table is empty. Populating COURSES table, could take awhile to load.");
+                addDepartments();
+                addDisciplines();
+                updateCourses("ALL");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void insertSubjectFields(String SubAbbrev, String SubFullName) {
@@ -125,14 +240,13 @@ public class Main {
         }
     }
 
-    //landing page url="https://aps2.missouriwestern.edu/schedule/default.asp?tck=201910"
     public static void insertCourses(ArrayList<Sections> list) {
         try {
             for (int i = 0; i < list.size(); i++) {
                 int CRN = list.get(i).getCRN();
                 String URL = list.get(i).getURL();
                 String course = list.get(i).getCourse();
-                String discipline = list.get(i).getDisciplineFull();
+                String discipline = list.get(i).getDiscipline();
                 String department = list.get(i).getDepartment();
                 int sectionNumber = list.get(i).getSectionNumber();
                 String type = list.get(i).getType();
@@ -179,7 +293,7 @@ public class Main {
                         "COURSE_URL) " +
                         "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-                PreparedStatement add = sqlite.getConn().prepareStatement(sql1);
+                PreparedStatement add = sqlite.conn.prepareStatement(sql1);
                 add.setInt(1, CRN);
                 add.setString(2, course);
                 add.setString(3, title);
@@ -214,11 +328,11 @@ public class Main {
         try {
             if (department.equalsIgnoreCase("ALL")) {
                 String deleteSQL = "DELETE FROM COURSES";
-                PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
+                PreparedStatement delete = sqlite.conn.prepareStatement(deleteSQL);
                 delete.executeUpdate();
             } else {
                 String deleteSQL = "DELETE FROM COURSES WHERE DEPARTMENT = ?";
-                PreparedStatement delete = sqlite.getConn().prepareStatement(deleteSQL);
+                PreparedStatement delete = sqlite.conn.prepareStatement(deleteSQL);
                 delete.setString(1, department.toUpperCase());
                 delete.executeUpdate();
             }
@@ -267,7 +381,7 @@ public class Main {
         String sql = "DELETE from subject";
 
         try {
-            Connection conn = sqlite.getConn();
+            Connection conn = sqlite.conn;
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -279,8 +393,9 @@ public class Main {
     public static void deleteDeptFields() {
         String sql = "DELETE from department";
 
-        try (Connection conn = sqlite.conn;
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try {
+            Connection conn = sqlite.conn;
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -291,8 +406,7 @@ public class Main {
 
     //Print function for Departments
     public static void printSubjectTable() throws IOException {
-        String adr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
-        ArrayList<SubjectObject> subjects = getSubjects(adr);
+        ArrayList<SubjectObject> subjects = getSubjects(BASEURL);
         System.out.println("Here is the Subject Table:");
         for (int i = 1; i < subjects.size(); i++) {
             SubjectObject so = subjects.get(i);
@@ -301,11 +415,11 @@ public class Main {
             insertSubjectFields(abbrev, full);
             System.out.println(abbrev + " " + full);
         }
+        System.out.println("\n");
     }
 
     public static void printDeptTable() throws IOException {
-        String adr = "https://aps2.missouriwestern.edu/schedule/?tck=201830";
-        ArrayList<DeptObject> departments = getDepartments(adr);
+        ArrayList<DeptObject> departments = getDepartments(BASEURL);
         System.out.println("Here is the Dept Table:");
         for (int i = 1; i < departments.size(); i++) {
             DeptObject deptO = departments.get(i);
@@ -314,6 +428,7 @@ public class Main {
             insertDeptFields(abbrev, full);
             System.out.println(abbrev + " " + full);
         }
+        System.out.println("\n");
     }
 
     public static ArrayList<SubjectObject> getSubjects(String addr) throws IOException {
@@ -329,8 +444,6 @@ public class Main {
 
                 SubjectObject newSubjectObject = new SubjectObject(subjectAbbrev, subjectFull.text());
                 subjects.add(newSubjectObject);
-                //Add size.text() to your list
-//                subjects.Add(subjectFull);
                 i++;
             }
         } catch (IOException e) {
@@ -350,11 +463,8 @@ public class Main {
                 if (deptFull == null) break;
                 String deptAbbrev = deptFull.attr("value");
 
-//                System.out.println(deptAbbrev + " " + deptFull.text());
                 DeptObject newSubjectObject = new DeptObject(deptAbbrev, deptFull.text());
                 departments.add(newSubjectObject);
-                //Add size.text() to your list
-
                 i++;
             }
         } catch (IOException e) {
@@ -377,11 +487,11 @@ public class Main {
         String instructor = "";
         int maxEnrollment = 0;
         int availableSeats = 0;
-        String courseNote = "";
+        String courseNote = "None";
         double courseFees = 0;
         String feeTitles = "";
-        String perCourse = "";
-        String perCredit = "";
+        String perCourse = "No";
+        String perCredit = "No";
         String courseTerm = "";
         String startDate = "";
         String endDate = "";
@@ -392,6 +502,9 @@ public class Main {
 
         System.out.printf("Scraping based on Department:%s\n", department);
         for (Element rowGeneral : courseGeneral) {
+            if (rowGeneral.select("td").text().equalsIgnoreCase("No courses found")){
+                return;
+            }
             String className = rowGeneral.attr("class");
             Elements tdGeneral = rowGeneral.select("td");
             if (className.equals("list_row")) {
@@ -399,6 +512,9 @@ public class Main {
                     CRN = Integer.parseInt(tdGeneral.get(0).text().trim());
                     URL = "https://aps2.missouriwestern.edu/schedule/" + tdGeneral.select("a").first().attr("href");
                     course = tdGeneral.get(1).text().trim();
+                    if (course.contains("</td>")){
+                        course = course.replace("</td>", "");
+                    }
                     sectionNumber = Integer.parseInt(tdGeneral.get(2).text().trim());
                     type = tdGeneral.get(3).text().trim();
                     title = tdGeneral.get(4).text();
@@ -408,9 +524,9 @@ public class Main {
                     room = tdGeneral.get(8).text();
                     instructor = tdGeneral.get(9).text();
                 } else {
-                    days = days + "\n" + tdGeneral.get(1).text().trim();
-                    times = times + "\n" + tdGeneral.get(2).text().trim();
-                    room = room + "\n" + tdGeneral.get(3).text();
+                    days = days + ", " + tdGeneral.get(1).text().trim();
+                    times = times + ", " + tdGeneral.get(2).text().trim();
+                    room = room + ", " + tdGeneral.get(3).text();
                 }
             }
             if (className.equals("detail_row")) {
@@ -423,37 +539,47 @@ public class Main {
                 Elements fees = tdGeneral.select("span.course_fees");
                 for (int i = 0; i < fees.size(); i++) {
                     int indexOfColon = fees.get(i).text().indexOf(':');
-                    int indexOfFee = fees.get(i).text().indexOf("Fee") + 4;
                     int indexOfFlat = fees.get(i).text().indexOf("FLAT");
                     int indexOfCred = fees.get(i).text().indexOf("CRED");
-                    if (fees.get(i).text().contains("Flat Fee")) {
+                    if (fees.get(i).text().contains("FLAT")) {
                         perCourse = "Yes";
                         if (feeTitles.length() == 0) {
                             feeTitles = fees.get(i).text().substring(indexOfColon + 2, indexOfFlat + 4);
                         } else {
-                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon + 2, indexOfFlat + 4);//.substring(fee.text().indexOf(": ") + 1, fee.text().indexOf("&nbsp"));
+                            feeTitles = feeTitles + ", " + fees.get(i).text().substring(indexOfColon + 2, indexOfFlat + 4);
                         }
-                        courseFees = courseFees + Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfFlat - 1));
+                        courseFees = courseFees + Double.parseDouble(fees.get(i).text().substring(indexOfFlat-7, indexOfFlat - 1).trim());
                     }
-                    if (fees.get(i).text().contains("per Credit Hour fee")) {
+                    if (fees.get(i).text().contains("CRED")) {
                         perCredit = "Yes";
                         if (feeTitles.length() == 0) {
                             feeTitles = fees.get(i).text().substring(indexOfColon + 2, indexOfCred + 4);
                         } else {
-                            feeTitles = feeTitles + "\n" + fees.get(i).text().substring(indexOfColon + 2, indexOfCred + 4);//.substring(fee.text().indexOf(": "), fee.text().indexOf("&nbsp"));
+                            feeTitles = feeTitles + ", " + fees.get(i).text().substring(indexOfColon + 2, indexOfCred + 4);
                         }
-                        courseFees = courseFees + (credits * (Double.parseDouble(fees.get(i).text().substring(indexOfFee, indexOfCred - 1))));
+                        courseFees = courseFees + (credits * (Double.parseDouble(fees.get(i).text().substring(indexOfCred-7, indexOfCred - 1).trim())));
                     }
                     if (!(fees.get(i).text().contains("Flat Fee")) && !(fees.get(i).text().contains("per Credit Hour fee"))) {
                         perCourse = "No";
                         perCredit = "No";
                         feeTitles = "None";
+                        courseFees = 0.0;
                     }
                 }
 
                 courseTerm = tdGeneral.select("span.course_term").text();
                 startDate = tdGeneral.select("span.course_begins").text().trim();
                 endDate = tdGeneral.select("span.course_ends").text().trim();
+
+                courseNote = tdGeneral.select("td.detail_cell").text()
+                        .replace(tdGeneral.select("span.course_enrollment").text(), "").trim()
+                        .replace(tdGeneral.select("span.course_fees").text(), "").trim()
+                        .replace(tdGeneral.select("span.course_term").text(), "").trim()
+                        .replace(tdGeneral.select("span.course_dates").text(), "").trim();
+                if (courseNote.length()==0){
+                    courseNote = "None";
+                }
+                courseFees = Math.round(courseFees * 100.00) / 100.00;
             }
             if (!(CRN == 0)) {
                 Sections section = new Sections(department, CRN, URL, course, sectionNumber, type, title, credits,
@@ -466,7 +592,7 @@ public class Main {
         }
     }
 
-    public static void updateDepartment(String department) {
+    public static void updateCourses(String department) {
         if (department.equalsIgnoreCase("ALL")) {
             Sections.removeALL();
             removeCoursesBasedOnDepartmentDB(department);
@@ -495,28 +621,6 @@ public class Main {
         } catch (SQLException e){
             System.err.println(e.getMessage());
         }
-        /*departments.add("AF");
-        departments.add("ART");
-        departments.add("BIO");
-        departments.add("BUS");
-        departments.add("CHE");
-        departments.add("CST");
-        departments.add("CSMP");
-        departments.add("CJLS");
-        departments.add("EPSS");
-        departments.add("EDU");
-        departments.add("ET");
-        departments.add("EFLJ");
-        departments.add("GS");
-        departments.add("HPER");
-        departments.add("HPG");
-        departments.add("HON");
-        departments.add("MIL");
-        departments.add("MUS");
-        departments.add("NUR");
-        departments.add("PSY");
-        departments.add("FINE");
-        departments.add("CON");*/
     }
 
     public static void addDisciplines() {

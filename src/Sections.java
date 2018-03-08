@@ -65,7 +65,7 @@ public class Sections{
 
     public void setDisciplineFull() {
         int i=0;
-        while (!(getDiscipline().equals(Main.disciplines.get(i).getDisciplineAbbrev()) && i<Main.disciplines.size()) ){
+        while (!(getDiscipline().equals(Main.disciplines.get(i).getDisciplineAbbrev())) && i<Main.disciplines.size()-1){
             i++;
         }
         disciplineFull = Main.disciplines.get(i).getDisciplineFull();
