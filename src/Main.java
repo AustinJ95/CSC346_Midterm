@@ -3,7 +3,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.*;
 import org.jsoup.Connection.*;
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -94,24 +93,30 @@ public class Main {
                 case 'E':
                     break;
                 case 'F':
+                    //Erase and build COURSES table
                     eraseAndBuildCoursesData(input);
                     break;
                 case 'G':
+                    //Print the COURSES table
                     printSections(input);
                     break;
                 case 'H':
+                    //Print COURSES table based on instructor
                     printByInstructor(input);
                     break;
                 case 'I':
+                    //Print COURSES table using control break for specific department
                     controlBreakByDepartment(input, 0);
                     break;
                 case 'J':
+                    //Print COURSES table using control break for all departments
                     controlBreakByDepartment(input, 1);
                     break;
                 case 'K':
-                    System.out.println("The person who coded the sections pages was not very good.");
+                    //Snarky, passive-aggressive message about website builder
+                    System.out.println("The person who coded the sections pages should go back to school.");
                     break;
-                case 'Q':break;
+                case 'Q':break;//quits the program
                 default:
                     System.out.println("Type a letter from the menu!");
                     break;
@@ -121,11 +126,26 @@ public class Main {
     }
 
     public static void eraseAndBuildCoursesData(Scanner input) {
+        try {
+            isDataBaseEmpty();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        addDepartments();
+        addDisciplines();
         String department;
         System.out.println("Enter a department code to have that department updated in the database, or enter \"ALL\" to update all departments.");
         department = input.next().trim().toUpperCase();
-        addDepartments();
-        addDisciplines();
+        boolean isValid = false;
+        int i = 0;
+        while (!(isValid) && i<departments.size()){
+            isValid = department.equalsIgnoreCase(departments.get(i).getDepartmentAbbrev());
+            i++;
+        }
+        if (!isValid){
+            System.out.println("Invalid entry, please retry and enter a valid department code i.e. CSMP.");
+            return;
+        }
         updateCourses(department);
     }
 
@@ -171,7 +191,11 @@ public class Main {
                         feeTitles, perCourse, perCredit, term, startDate, endDate);
                 tempArrayList.add(newCourse);
             }
-            Sections.printBreak();
+            if(tempArrayList.size()==0) {
+                System.out.println("No matches found, please select the option again and enter a valid department or discipline.");
+            } else{
+                Sections.printBreak();
+            }
             Sections.removeALL();
         } catch (SQLException e) {
             System.err.println(e.getMessage());
@@ -198,7 +222,7 @@ public class Main {
                 String times = resultSet.getString(6);
                 String location = resultSet.getString(7);
                 String output = String.format("DEPARTMENT:(%s)   INSTRUCTOR:(%s)   COURSE:(%s)   CRN:(%d)   DAYS:(%s)   " +
-                        "TIMES:(%s)   LOCATIONS:(%s)\n", department, instructor, course, crn, days, times, location);
+                        "TIMES:(%s)   LOCATIONS:(%s)", department, instructor, course, crn, days, times, location);
                 System.out.println(output);
             }
         } catch (SQLException e) {
@@ -214,12 +238,33 @@ public class Main {
             ResultSet resultSet;
             String query;
             if (userInput.equalsIgnoreCase("discipline")) {
-                System.out.println("Enter a discipline.");
+                System.out.println("Enter a discipline code i.e. csc.");
                 String userDiscipline = input.next().trim().toUpperCase();
+                boolean isValidDiscipline = false;
+                int i = 0;
+
+                while (!isValidDiscipline && i<disciplines.size()){
+                    isValidDiscipline = userInput.equalsIgnoreCase(disciplines.get(i).getDisciplineAbbrev());
+                    i++;
+                }
+                if (!(isValidDiscipline)){
+                    System.out.println("Invalid entry, please retry and enter a valid discipline code i.e. CSC.");
+                    return;
+                }
                 query = "SELECT * FROM COURSES WHERE DISCIPLINE='" + userDiscipline + "' ORDER BY DEPARTMENT";
             } else if (userInput.equalsIgnoreCase("department")) {
-                System.out.println("Enter a department.");
+                System.out.println("Enter a department code i.e. csmp.");
                 String userDepartment = input.next().trim().toUpperCase();
+                boolean isValidDepartment = false;
+                int i = 0;
+                while (!isValidDepartment && i<departments.size()){
+                    isValidDepartment = userInput.equalsIgnoreCase(departments.get(i).getDepartmentAbbrev());
+                    i++;
+                }
+                if (!(isValidDepartment)){
+                    System.out.println("Invalid entry, please retry and enter a valid department code i.e. CSMP.");
+                    return;
+                }
                 query = "SELECT * FROM COURSES WHERE DEPARTMENT='" + userDepartment + "' ORDER BY DEPARTMENT";
             } else {
                 System.out.println("No matches found");
