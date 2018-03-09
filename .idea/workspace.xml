@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9b085d8c-fe34-4462-97a7-b9876e9f78fb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/DeptObject.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/DeptObject.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Main.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/SubjectObject.class" afterPath="$PROJECT_DIR$/out/production/CSC346 Midterm Part B/SubjectObject.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -332,7 +334,7 @@
       <workItem from="1520374181880" duration="303000" />
       <workItem from="1520374518557" duration="6887000" />
       <workItem from="1520477844731" duration="18083000" />
-      <workItem from="1520549881069" duration="4327000" />
+      <workItem from="1520549881069" duration="5052000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Merge disaster">
       <created>1520379838968</created>
@@ -362,11 +364,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520535286213</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added functionality for handling invalid entries for Person_B menu options&#10;Reformatted various Person_B print out methods">
+      <created>1520554350051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1520554350052</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37466000" />
+    <option name="totallyTimeSpent" value="38191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,7 +463,8 @@
     <MESSAGE value="Fixed Merge disaster" />
     <MESSAGE value="Successfully running option I" />
     <MESSAGE value="Successfully running option J&#10;All Part B options are being successfully ran" />
-    <option name="LAST_COMMIT_MESSAGE" value="Successfully running option J&#10;All Part B options are being successfully ran" />
+    <MESSAGE value="Added functionality for handling invalid entries for Person_B menu options&#10;Reformatted various Person_B print out methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality for handling invalid entries for Person_B menu options&#10;Reformatted various Person_B print out methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
