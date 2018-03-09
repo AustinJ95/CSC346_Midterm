@@ -91,6 +91,10 @@ public class Main {
                     printDeptTable();
                     break;
                 case 'E':
+//                    String input1="CSMP";
+//                    Print the report of disciplines by Department
+//                    3/9/18 change JC
+                    printReportOfDisciplinesByDept(input);
                     break;
                 case 'F':
                     //Erase and build COURSES table
@@ -123,6 +127,50 @@ public class Main {
             }
 
         } while (ch != 'Q');
+    }
+
+//    3/9/18 change JC
+    public static void printReportOfDisciplinesByDept(Scanner input){
+        System.out.println("Enter a department.");
+        String userInput = input.next().trim().toUpperCase();
+
+        String query2 = "SELECT DepAbbrev, DepFullName, SubAbbrev, SubFullName FROM ((COURSES INNER JOIN subject ON COURSES.DISCIPLINE=subject.SubAbbrev) INNER JOIN department ON COURSES.DEPARTMENT=department.DepAbbrev) WHERE department.DepAbbrev='" + userInput+"' GROUP BY DISCIPLINE";
+        String depAbbrev = "";
+        String depFullName = "";
+
+        ArrayList<SubjectObject> subObjArl = new ArrayList<SubjectObject>();
+
+        try {
+            Statement statement = sqlite.conn.createStatement();
+            ResultSet rs = statement.executeQuery(query2);
+            while (rs.next()){
+                depAbbrev = rs.getString(1);
+                depFullName = rs.getString(2);
+                String subAbbrev = rs.getString(3);
+                String subFullName = rs.getString(4);
+
+//                System.out.println(depAbbrev + " " + depFullName + " " +subAbbrev + " " +subFullName);
+
+                SubjectObject subObjectForReport = new SubjectObject(subAbbrev, subFullName);
+                subObjArl.add(subObjectForReport);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.out.println(depAbbrev + " -- " + depFullName);
+
+        for (int i = 0; i < subObjArl.size(); i++){
+            SubjectObject so = subObjArl.get(i);
+            String abbrev = so.getSubjectAbbrev();
+            String full = so.getSubjFullName();
+
+            System.out.println("\t"+abbrev + " -- " + full);
+        }
+
+//        System.exit(1);
+
     }
 
     public static void eraseAndBuildCoursesData(Scanner input) {
@@ -334,6 +382,7 @@ public class Main {
             e.printStackTrace();
         }
     }
+
 
     public static void insertSubjectFields(String SubAbbrev, String SubFullName) {
         String sql = "INSERT INTO subject(SubAbbrev,SubFullName) VALUES(?,?)";
@@ -768,6 +817,14 @@ class SubjectObject {
                 "subjectAbbrev='" + subjectAbbrev + '\'' +
                 ", subjFullName='" + subjFullName + '\'' +
                 '}';
+    }
+
+    public String getSubjectAbbrev() {
+        return subjectAbbrev;
+    }
+
+    public String getSubjFullName() {
+        return subjFullName;
     }
 }
 
